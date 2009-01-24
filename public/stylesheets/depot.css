@@ -129,6 +129,10 @@ border-bottom: 3px dotted #77d;
   clear: both;
 }
 
+#store .entry form, #store .entry form div { 
+display: inline; 
+}
+
 #store .entry .add-to-cart {
   position: relative;
 }
