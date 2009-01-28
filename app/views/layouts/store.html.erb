@@ -12,12 +12,16 @@
   </div> 
   <div id="columns"> 
     <div id="side"> 
-      <a href="http://www....">Home</a><br /> 
+      <%= link_to 'Home', { :controller => 'store', :action => 'index' } %><br />
       <a href="http://www..../faq">Questions</a><br /> 
       <a href="http://www..../news">News</a><br /> 
-      <a href="http://www..../contact">Contact</a><br /> 
+      <a href="http://www..../contact">Contact</a><br />
+      <%= link_to 'Admin', { :controller => 'products', :actions => 'index' } %>
     </div> 
-    <div id="main"> 
+    <div id="main">
+      <% if flash[:notice] -%> 
+      <div id="notice"><%= flash[:notice] %></div> 
+      <% end -%>
       <%= yield :layout %> 
     </div> 
   </div> 

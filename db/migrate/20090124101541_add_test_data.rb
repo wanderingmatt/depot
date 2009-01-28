@@ -68,4 +68,3 @@ class AddTestData < ActiveRecord::Migration
     Product.delete_all
   end
 end
-

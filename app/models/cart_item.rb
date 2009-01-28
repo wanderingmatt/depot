@@ -15,6 +15,6 @@ class CartItem
   end
   
   def price
-    @product.price * @quantity
+    @product.price_in_dollars * @quantity
   end
 end
