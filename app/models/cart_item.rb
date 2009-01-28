@@ -6,7 +6,7 @@ class CartItem
     @quantity = 1
   end
   
-  def increment quantity
+  def increment_quantity
     @quantity += 1
   end
   
