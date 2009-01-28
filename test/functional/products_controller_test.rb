@@ -20,7 +20,7 @@ class ProductsControllerTest < ActionController::TestCase
       :name => 'product[image_url]'
     }
     assert_tag :tag => 'input', :attributes => {
-      :name => 'product[price]'
+      :name => 'product[price_in_dollars]'
     }
   end
 
@@ -54,7 +54,7 @@ class ProductsControllerTest < ActionController::TestCase
       :name => 'product[image_url]'
     }
     assert_tag :tag => 'input', :attributes => {
-      :name => 'product[price]'
+      :name => 'product[price_in_dollars]'
     }
     assert_response :success
   end
