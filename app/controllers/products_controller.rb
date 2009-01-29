@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   # GET /products
   # GET /products.xml
-  def index
+  def index    
     @products = Product.find(:all)
 
     respond_to do |format|

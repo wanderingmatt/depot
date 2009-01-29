@@ -1,6 +1,5 @@
 class StoreController < ApplicationController
   def index
-    @page_title = 'Wandering Comics'
     @cart = find_cart
     @products = Product.find_products_for_sale
   end
@@ -16,7 +15,7 @@ class StoreController < ApplicationController
       @current_item = @cart.add_product(product)
       respond_to do |format|
         format.js if request.xhr?
-        format.html if { redirect_to_index }
+        format.html { redirect_to_index('The item was successfully added to your cart') }
       end
     end
   end
