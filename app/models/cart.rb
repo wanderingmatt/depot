@@ -10,10 +10,17 @@ class Cart
     if current_item
       current_item.increment_quantity
     else
-      @items << CartItem.new(product)
+      current_item = CartItem.new(product)
+      @items << current_item
     end
+    current_item
   end
+  
   alias :<< :add_product
+  
+  def total_items
+    @items.sum { |item| item.quantity }
+  end
     
   def total_price
     @items.sum { |item| item.price }

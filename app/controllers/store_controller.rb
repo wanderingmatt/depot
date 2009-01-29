@@ -1,8 +1,8 @@
 class StoreController < ApplicationController
   def index
-    find_cart
-    @products = Product.find_products_for_sale
     @page_title = 'Wandering Comics'
+    @cart = find_cart
+    @products = Product.find_products_for_sale
   end
   
   def add_to_cart # TODO Cart should have it's own controller
@@ -13,7 +13,11 @@ class StoreController < ApplicationController
       redirect_to_index('Invalid product')
     else
       @cart = find_cart
-      @cart.add_product(product)
+      @current_item = @cart.add_product(product)
+      respond_to do |format|
+        format.js if request.xhr?
+        format.html if { redirect_to_index }
+      end
     end
   end
   
@@ -26,8 +30,8 @@ class StoreController < ApplicationController
   private
 
 
-  def redirect_to_index(message)
-    flash[:notice] = message
+  def redirect_to_index message = nil
+    flash[:notice] = message if message
     redirect_to :action => 'index'
   end
   
