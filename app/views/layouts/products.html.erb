@@ -4,14 +4,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Products: <%= controller.action_name %></title>
+  <title><%= controller_name.capitalize %> &bull; Admin &bull; <%= site_name %></title>
   <%= stylesheet_link_tag 'scaffold', 'depot' %>
+  <%= stylesheet_link_tag 'reset', :media => 'all' %>
+  <%= stylesheet_link_tag '960', :media => 'all' %>
+  <%# stylesheet_link_tag 'globals', :media => 'all' %>
 </head>
 <body>
-
-<p style="color: green"><%= flash[:notice] %></p>
-
-<%= yield  %>
-
+  <div id="wrapper">
+    <div id="header" class="container_16">
+      <h1><%= site_name %></h1>
+    </div>
+    <div id="content">
+      <p style="color: green"><%= flash[:notice] %></p>
+      <%= yield  %>
+    </div>
+  </div>
 </body>
 </html>

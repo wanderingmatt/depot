@@ -1,0 +1,458 @@
+/* 
+FILENAME: globals.css
+DESCRIPTION: This stylesheet serves global declarations to all Pragprog Books assets
+AUTHOR: Matthew Anderson -> matthew.anderson.design@gmail.com
+LAST MODIFIED DATE: 01.29.2009
+*/
+
+/* =GRID OVERRIDE */
+/*  Grid is inactive when entire section is commented */
+
+body {
+  background: #fff url("../images/16_col.png") center top repeat-y !important;
+}
+
+#wrapper, #banner, #content, #container {
+  background: none !important;
+}
+
+/* =BASE */
+
+body {
+  background: #0a0a0a;
+  font: normal 16px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif; /* normalize font size across browsers */
+  text-align: left;
+	color: #fff;
+}
+
+a:link, a:visited {
+	font-weight: normal;
+	text-decoration: none;
+	color: #fae443;
+}
+	
+a:hover, a:active {
+  background-color: #fae443;
+  color: #555a6e;
+}
+
+a, strong, b { /* Straightens out OS X font rendering */
+  line-height: 19px;
+}
+
+.hidden {
+	display: none;
+}
+
+/* =GRID =MODIFIERS */
+
+.container_16:after{clear:both;content:'.';display:block;visibility:hidden;height:0}
+.container_16{display:inline-block}
+* html .container_16{height:1%}
+.container_16{display:block}
+
+.right {
+  float: right !important;
+}
+
+li.alpha {
+  clear: both;
+}
+
+/* =BANNER */
+
+#banner {
+  clear: both;
+  background: #16171c url("../images/bg_banner.png") top center no-repeat;
+  height: 80px;
+  margin: 40px 0;
+}
+
+#logo {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+}
+
+#logo a, #logo span {
+  position: absolute;
+  top: 20px;
+  left: 355px;
+  display: block;
+  background: transparent url("../images/logo-rev.png") no-repeat; 
+  width: 250px;
+  height: 40px;
+}
+
+#logo a:hover {
+  background-image: url("../images/logo-hover.png"); 
+}
+
+#logo img {
+    display: block;
+    width: 0;
+}
+
+#navigation ul li {
+  position: absolute;
+  top: 20px;
+}
+
+#navigation ul li#home {
+  left: 430px;
+}
+
+#navigation ul li#previous {
+  left: 10px;
+}
+
+#navigation ul li#next {
+  right: 10px;
+}
+
+#navigation ul li .button {
+  width: 140px;
+}
+
+#navigation ul li#home .button {
+  width: 80px;
+}
+
+/* =CONTENT */
+
+#content {
+  clear: both;
+}
+
+/* =HEADINGS */
+
+h1, h2 {
+  letter-spacing: -0.05em;
+}
+
+h1 {
+  font: 300 2.85em/40px 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #444858;
+}
+
+h1 strong {
+  font-weight: bold;
+  color: #fff;
+}
+
+h1 em {
+  display: block;
+  font-weight: bold;
+  font-style: normal;
+  color: #fae443;
+}
+
+h2 {
+  margin: 20px 0 40px 0;
+  line-height: 20px;
+  font-size: 1em;
+  font-weight: normal;
+  color: #fff;
+}
+
+.actor h2 {
+  margin: 0;
+  line-height: 20px;
+  font-size: 1em;
+}
+
+h3 {
+  margin-bottom: 20px;
+  line-height: 20px;
+  font-size: .875em;
+  font-weight: normal;
+  text-align: center;
+  color: #575b6a;
+}
+
+/* =CONTENT */
+
+hr {
+  clear: both;
+  height: 1px;
+  margin: 0 10px 19px 10px;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid #1f2024;
+}
+
+#content p, #content ul, #content ol {
+  font-size: .875em;
+}
+
+/* =HOME */
+
+.section {
+  display: block;
+  font-size: .875em;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #30323a;
+}
+
+.performance {
+  padding-top: 0px;
+  font-size: .75em;
+  text-align: right;
+  color: #444858;
+}
+
+.performance .section {
+  margin-bottom: 23px;
+  font-size: 1.075em;
+  color: #30323a;  
+}
+
+.performance strong {
+  color: #787c8b;
+}
+
+.performance strong.date {
+  color: #fae443;
+}
+
+#actors ul {
+  margin: 0 10px 20px 10px;
+}
+
+#actors ul li {
+  float: left;
+  display: inline;
+  width: 235px;  
+}
+
+#actors ul li a {
+  display: block;
+  background-position: 0px 0px;
+  background-repeat; no-repeat
+  width: 235px;
+  padding: 80px 0;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+}
+
+#actors ul li a strong {
+  display: block;
+}
+
+#actors ul li a span {
+  visibility: hidden;
+}
+
+#actors ul li a:hover span {
+  visibility: visible;
+}
+
+#actors ul li#download a {
+  background: #fae443;
+  color: #555a6e;
+}
+
+#actors ul li#bradley_w_anderson a {
+  background-image: url("../images/bradley-w-anderson-thumbnail.jpg");
+}
+
+#actors ul li#martin_andrews a {
+  background-image: url("../images/martin-andrews-thumbnail.jpg");
+}
+
+#actors ul li#hannah_barfoot a {
+  background-image: url("../images/hannah-barfoot-thumbnail.jpg");
+}
+
+#actors ul li#jessica_bocade a {
+  background-image: url("../images/jessica-bocade-thumbnail.jpg");
+}
+
+#actors ul li#deonna_bouye a {
+  background-image: url("../images/deonna-bouye-thumbnail.jpg");
+}
+
+#actors ul li#nick_garcia a {
+  background-image: url("../images/nick-garcia-thumbnail.jpg");
+}
+
+#actors ul li#ethan_henry a {
+  background-image: url("../images/ethan-henry-thumbnail.jpg");
+}
+
+#actors ul li#helen_madelyn_kim a {
+  background-image: url("../images/helen-madelyn-kim-thumbnail.jpg");
+}
+
+#actors ul li#megha_nabe a {
+  background-image: url("../images/megha-nabe-thumbnail.jpg");
+}
+
+#actors ul li#makeba_pace a {
+  background-image: url("../images/makeba-pace-thumbnail.jpg");
+}
+
+#actors ul li#cynthia_pohlson a {
+  background-image: url("../images/cynthia-pohlson-thumbnail.jpg");
+}
+
+#actors ul li#rebekah_stein a {
+  background-image: url("../images/rebekah-stein-thumbnail.jpg");
+}
+
+#actors ul li#david_tull a {
+  background-image: url("../images/david-tull-thumbnail.jpg");
+}
+
+#actors ul li a:hover {
+  background-position: 0 -200px;
+  text-indent: 0;
+}
+
+#actors ul li#download a:hover {
+  background: #555a6e url("../images/icons/download.png") 50% 140px no-repeat;
+  color: #fff;
+}
+
+/* =ACTORS */
+
+.actor .headshot img {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.actor .catch {
+  clear:;
+  position: relative;
+}
+
+.actor h1 {
+  margin: 20px 0;
+}
+
+.actor .affiliation {
+  position: absolute;
+  bottom: 0;
+  font-size: .875em;
+  font-style: normal;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #30323a;
+}
+
+.actor .stage_left .affiliation {
+  left: 0;
+}
+
+.actor .stage_right .affiliation {
+  right: 0;
+}
+
+.actor .vcard .supporting,
+.actor .vcard .buttons {
+  margin-top: 40px;
+}
+
+.stage_right {
+  text-align: right;
+}
+
+.stage_left {
+  float: right;
+}
+
+.stage_right .buttons a.button, .stage_right .buttons button {
+  float: right;
+}
+
+/* =DOME */
+
+#dome img {
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+/* =BUTTONS =BASE */
+/* Abstracted from the Wufoo implementation - thanks guys! */
+/* http://particletree.com/features/rediscovering-the-button-element/ */
+
+.buttons {
+	overflow: hidden; /* Float clearing for good browsers */
+	margin-bottom: 20px;
+	font-size: .85em;
+}
+
+.buttons a.button, .buttons button {
+  display: block;
+  float: left;
+  background: #22242c url("../images/bg_button_banner.png") bottom center repeat-x;
+  border: 1px solid #4c5163;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  font-weight: normal;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 9px; /* Links */
+  white-space: nowrap;
+  text-align: center;
+}
+
+.buttons button {
+  width: auto;
+  overflow: visible;
+  padding: 4px 10px 3px 7px; /* IE6 */
+}
+
+.buttons button[type] {
+  padding: 5px 10px 5px 7px; /* Firefox */
+  line-height: 18px; /* Safari */
+}
+
+*:first-child+html button[type] {
+  padding: 4px 10px 3px 7px; /* IE7 */
+}
+
+.buttons button img, .buttons a img {
+  margin: 0 3px -3px 0 !important;
+  padding: 0;
+  border: none;
+  width: 16px;
+  height: 16px;
+}
+
+/* =BUTTONS =TWEAKS */
+
+.buttons a.button, .buttons button { /* Safari */
+  -webkit-border-radius: 20px;
+}
+
+.buttons a.button, .buttons button, x:-moz-any-link, x:default {
+  -moz-border-radius: 20px;
+}
+
+/* =BUTTONS =STANDARD */
+
+.buttons button:hover, .buttons a.button:hover, .buttons a.button:active {
+  background: #111216;
+  border: 1px solid #444858;
+  color: #fff;
+}
+
+/* =BUTTONS =RESUME */
+
+button.resume, .buttons a.resume {
+  background: transparent;
+  width: 140px;
+  padding: 8px;
+  border: 2px solid #fae443;
+  color: #555a6e;
+}
+
+.buttons a.resume:hover, button.resume:hover, .buttons a.resume:active {
+  background: #fae443;
+  border: 2px solid #fae443;
+  color: #565b6e;
+}
