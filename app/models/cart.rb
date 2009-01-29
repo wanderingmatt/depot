@@ -5,7 +5,7 @@ class Cart
     @items = []
   end
   
-  def add_product(product)
+  def add_product product
     current_item = @items.find { |item| item.product == product }
     if current_item
       current_item.increment_quantity
@@ -13,7 +13,8 @@ class Cart
       @items << CartItem.new(product)
     end
   end
-  
+  alias :<< :add_product
+    
   def total_price
     @items.sum { |item| item.price }
   end

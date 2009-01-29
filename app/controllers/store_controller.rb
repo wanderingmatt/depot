@@ -1,9 +1,10 @@
 class StoreController < ApplicationController
   def index
+    find_cart
     @products = Product.find_products_for_sale
   end
   
-  def add_to_cart
+  def add_to_cart # TODO Cart should have it's own controller
     begin
       product = Product.find(params[:id])
     rescue ActiveRecord::RecordNotFound
