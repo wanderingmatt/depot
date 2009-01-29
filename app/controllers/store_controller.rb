@@ -2,6 +2,7 @@ class StoreController < ApplicationController
   def index
     find_cart
     @products = Product.find_products_for_sale
+    @page_title = 'Wandering Comics'
   end
   
   def add_to_cart # TODO Cart should have it's own controller
