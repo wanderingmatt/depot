@@ -1,13 +1,13 @@
 class Product < ActiveRecord::Base  
-  before_save :price_in_dollars
-  
-  def price_in_dollars
-    self.price / 100.0 unless self.price == nil
-  end
-  
-  def price_in_dollars=(amount)
-    self.price = (amount.to_f * 100).to_i
-  end
+  # before_save :price_in_dollars
+  # 
+  # def price_in_dollars
+  #   self.price / 100.0 unless self.price == nil
+  # end
+  # 
+  # def price_in_dollars=(amount)
+  #   self.price = (amount.to_f * 100).to_i
+  # end
   
   def self.find_products_for_sale 
     find(:all, :order => 'title') 

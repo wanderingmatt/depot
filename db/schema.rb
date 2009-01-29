@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090128032043) do
+ActiveRecord::Schema.define(:version => 20090129021828) do
 
   create_table "products", :force => true do |t|
     t.string   "title"
@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(:version => 20090128032043) do
     t.string   "image_url"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "price"
+    t.decimal  "price",       :default => 0.0
   end
 
   create_table "sessions", :force => true do |t|

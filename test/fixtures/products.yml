@@ -4,10 +4,10 @@ one:
   title: Pragmatic Project Automation
   description: Pragmatic Project Automation
   image_url: /images/auto.jpg
-  price: 2900
+  price: 29.00
 
 two:
   title: Pragmatic Version Control
   description: Pragmatic Version Control
   image_url: /images/svn.jpg
-  price: 2800
+  price: 28.00
