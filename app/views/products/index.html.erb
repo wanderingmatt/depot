@@ -1,5 +1,5 @@
-<div id="product-list">
-  <h1>Listing products</h1>
+<div id="product-list" class="grid_12">
+  <h3>Available Books</h3>
   <table>
     <% for product in @products %> 
     <tr class="<%= cycle('list-line-odd', 'list-line-even') %>"> 
@@ -21,5 +21,11 @@
   <% end %> 
   </table> 
 </div> 
-<br /> 
-<%= link_to 'New product', new_product_path %>
+<div id="sidebar" class="grid_4">
+  <div class="highlight rounded_5">
+    <h3><%= Product.count %> Books</h3>
+  </div>
+  <div class="buttons">
+    <%= link_to 'Add a Book', new_product_path, :class => 'button rounded_10' %>
+  </div>
+</div>

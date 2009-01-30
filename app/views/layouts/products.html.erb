@@ -5,19 +5,18 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title><%= controller_name.capitalize %> &bull; Admin &bull; <%= site_name %></title>
-  <%= stylesheet_link_tag 'scaffold', 'depot' %>
-  <%= stylesheet_link_tag 'reset', :media => 'all' %>
-  <%= stylesheet_link_tag '960', :media => 'all' %>
-  <%# stylesheet_link_tag 'globals', :media => 'all' %>
+  <%# stylesheet_link_tag 'scaffold', 'depot' %>
+  <%= stylesheet_link_tag 'reset', '960', 'globals', 'admin', :media => 'all' %>
 </head>
 <body>
   <div id="wrapper">
     <div id="header" class="container_16">
-      <h1><%= site_name %></h1>
+      <h1 class="grid_12"><%= site_name %></h1>
+      <em class="grid_4">Admin</em>
     </div>
-    <div id="content">
+    <div id="content" class="container_16 rounded_10">
       <p style="color: green"><%= flash[:notice] %></p>
-      <%= yield  %>
+      <%= yield %>
     </div>
   </div>
 </body>

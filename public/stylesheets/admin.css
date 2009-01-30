@@ -1,0 +1,12 @@
+/* 
+FILENAME: admin.css
+DESCRIPTION: This stylesheet serves additional declarations specific to the Pragprog Books admi interface
+AUTHOR: Matthew Anderson -> matthew.anderson.design@gmail.com
+*/
+
+.highlight {
+  background-color: #333;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}

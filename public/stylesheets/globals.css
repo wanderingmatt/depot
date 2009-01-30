@@ -2,12 +2,11 @@
 FILENAME: globals.css
 DESCRIPTION: This stylesheet serves global declarations to all Pragprog Books assets
 AUTHOR: Matthew Anderson -> matthew.anderson.design@gmail.com
-LAST MODIFIED DATE: 01.29.2009
 */
 
 /* =GRID OVERRIDE */
 /*  Grid is inactive when entire section is commented */
-
+/*
 body {
   background: #fff url("../images/16_col.png") center top repeat-y !important;
 }
@@ -15,27 +14,27 @@ body {
 #wrapper, #banner, #content, #container {
   background: none !important;
 }
-
+*/
 /* =BASE */
 
 body {
-  background: #0a0a0a;
-  font: normal 16px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif; /* normalize font size across browsers */
+  background: #7c6b61 url("/images/bg.jpg");
+  font: normal 62.5%/20px 'Helvetica Neue', Helvetica, Arial, sans-serif; /* normalize font size across browsers */
   text-align: left;
-	color: #fff;
+	color: #333;
 }
-
+/*
 a:link, a:visited {
-	font-weight: normal;
-	text-decoration: none;
-	color: #fae443;
+  font-weight: normal;
+  text-decoration: none;
+  color: #fae443;
 }
-	
+  
 a:hover, a:active {
   background-color: #fae443;
   color: #555a6e;
 }
-
+*/
 a, strong, b { /* Straightens out OS X font rendering */
   line-height: 19px;
 }
@@ -59,69 +58,18 @@ li.alpha {
   clear: both;
 }
 
-/* =BANNER */
+/* =SHARED */
 
-#banner {
-  clear: both;
-  background: #16171c url("../images/bg_banner.png") top center no-repeat;
-  height: 80px;
-  margin: 40px 0;
-}
+.rounded_10 { -webkit-border-radius: 10px; } /* Safari */
+.rounded_10, x:-moz-any-link, x:default { -moz-border-radius: 10px; } /* Firefox 3 */
+.rounded_5 { -webkit-border-radius: 5px; } /* Safari */
+.rounded_5, x:-moz-any-link, x:default { -moz-border-radius: 5px; } /* Firefox 3 */
 
-#logo {
-  position: relative;
-  width: 960px;
-  margin: 0 auto;
-}
-
-#logo a, #logo span {
-  position: absolute;
-  top: 20px;
-  left: 355px;
-  display: block;
-  background: transparent url("../images/logo-rev.png") no-repeat; 
-  width: 250px;
-  height: 40px;
-}
-
-#logo a:hover {
-  background-image: url("../images/logo-hover.png"); 
-}
-
-#logo img {
-    display: block;
-    width: 0;
-}
-
-#navigation ul li {
-  position: absolute;
-  top: 20px;
-}
-
-#navigation ul li#home {
-  left: 430px;
-}
-
-#navigation ul li#previous {
-  left: 10px;
-}
-
-#navigation ul li#next {
-  right: 10px;
-}
-
-#navigation ul li .button {
-  width: 140px;
-}
-
-#navigation ul li#home .button {
-  width: 80px;
-}
-
-/* =CONTENT */
+/* =LAYOUT */
 
 #content {
-  clear: both;
+  background-color: #fff;
+  margin: 0 auto;
 }
 
 /* =HEADINGS */
@@ -131,34 +79,17 @@ h1, h2 {
 }
 
 h1 {
-  font: 300 2.85em/40px 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #444858;
-}
-
-h1 strong {
-  font-weight: bold;
+  margin: 20px 0;
+  line-height: 40px;
+  font: bold 3.6em/40px 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #fff;
-}
-
-h1 em {
-  display: block;
-  font-weight: bold;
-  font-style: normal;
-  color: #fae443;
 }
 
 h2 {
-  margin: 20px 0 40px 0;
-  line-height: 20px;
-  font-size: 1em;
-  font-weight: normal;
-  color: #fff;
-}
-
-.actor h2 {
-  margin: 0;
-  line-height: 20px;
-  font-size: 1em;
+  margin: 20px 0;
+  padding-bottom: 19px;
+  border-bottom: 1px solid #eee;
+  font-size: 2.2em;
 }
 
 h3 {
@@ -185,194 +116,42 @@ hr {
   font-size: .875em;
 }
 
-/* =HOME */
+/* =HEADER */
 
-.section {
-  display: block;
-  font-size: .875em;
+#header em {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 40px;
+  font-size: 1.6em;
   font-style: normal;
+  font-weight: bold;
   text-transform: uppercase;
-  color: #30323a;
-}
-
-.performance {
-  padding-top: 0px;
-  font-size: .75em;
   text-align: right;
-  color: #444858;
+  color: #afa6a0;
 }
 
-.performance .section {
-  margin-bottom: 23px;
-  font-size: 1.075em;
-  color: #30323a;  
+/* =FORMS */
+
+form li {
+  clear: both;
+  border-bottom: 1px solid #eee;
+  line-height: 40px;
 }
 
-.performance strong {
-  color: #787c8b;
-}
-
-.performance strong.date {
-  color: #fae443;
-}
-
-#actors ul {
-  margin: 0 10px 20px 10px;
-}
-
-#actors ul li {
+form li label {
+  display: block;
   float: left;
-  display: inline;
-  width: 235px;  
+  width: 120px;
+/*  line-height: 40px;
+*/  font-size: 1.6em;
+  font-weight: bold;
+  color: #666;
 }
 
-#actors ul li a {
-  display: block;
-  background-position: 0px 0px;
-  background-repeat; no-repeat
-  width: 235px;
-  padding: 80px 0;
-  font-size: 18px;
-  text-align: center;
-  color: #fff;
+form li label:after {
+  content: ':';
 }
 
-#actors ul li a strong {
-  display: block;
-}
-
-#actors ul li a span {
-  visibility: hidden;
-}
-
-#actors ul li a:hover span {
-  visibility: visible;
-}
-
-#actors ul li#download a {
-  background: #fae443;
-  color: #555a6e;
-}
-
-#actors ul li#bradley_w_anderson a {
-  background-image: url("../images/bradley-w-anderson-thumbnail.jpg");
-}
-
-#actors ul li#martin_andrews a {
-  background-image: url("../images/martin-andrews-thumbnail.jpg");
-}
-
-#actors ul li#hannah_barfoot a {
-  background-image: url("../images/hannah-barfoot-thumbnail.jpg");
-}
-
-#actors ul li#jessica_bocade a {
-  background-image: url("../images/jessica-bocade-thumbnail.jpg");
-}
-
-#actors ul li#deonna_bouye a {
-  background-image: url("../images/deonna-bouye-thumbnail.jpg");
-}
-
-#actors ul li#nick_garcia a {
-  background-image: url("../images/nick-garcia-thumbnail.jpg");
-}
-
-#actors ul li#ethan_henry a {
-  background-image: url("../images/ethan-henry-thumbnail.jpg");
-}
-
-#actors ul li#helen_madelyn_kim a {
-  background-image: url("../images/helen-madelyn-kim-thumbnail.jpg");
-}
-
-#actors ul li#megha_nabe a {
-  background-image: url("../images/megha-nabe-thumbnail.jpg");
-}
-
-#actors ul li#makeba_pace a {
-  background-image: url("../images/makeba-pace-thumbnail.jpg");
-}
-
-#actors ul li#cynthia_pohlson a {
-  background-image: url("../images/cynthia-pohlson-thumbnail.jpg");
-}
-
-#actors ul li#rebekah_stein a {
-  background-image: url("../images/rebekah-stein-thumbnail.jpg");
-}
-
-#actors ul li#david_tull a {
-  background-image: url("../images/david-tull-thumbnail.jpg");
-}
-
-#actors ul li a:hover {
-  background-position: 0 -200px;
-  text-indent: 0;
-}
-
-#actors ul li#download a:hover {
-  background: #555a6e url("../images/icons/download.png") 50% 140px no-repeat;
-  color: #fff;
-}
-
-/* =ACTORS */
-
-.actor .headshot img {
-  display: block;
-  margin-bottom: 40px;
-}
-
-.actor .catch {
-  clear:;
-  position: relative;
-}
-
-.actor h1 {
-  margin: 20px 0;
-}
-
-.actor .affiliation {
-  position: absolute;
-  bottom: 0;
-  font-size: .875em;
-  font-style: normal;
-  text-transform: uppercase;
-  white-space: nowrap;
-  color: #30323a;
-}
-
-.actor .stage_left .affiliation {
-  left: 0;
-}
-
-.actor .stage_right .affiliation {
-  right: 0;
-}
-
-.actor .vcard .supporting,
-.actor .vcard .buttons {
-  margin-top: 40px;
-}
-
-.stage_right {
-  text-align: right;
-}
-
-.stage_left {
-  float: right;
-}
-
-.stage_right .buttons a.button, .stage_right .buttons button {
-  float: right;
-}
-
-/* =DOME */
-
-#dome img {
-  display: block;
-  margin: 0 auto 20px auto;
-}
 
 /* =BUTTONS =BASE */
 /* Abstracted from the Wufoo implementation - thanks guys! */
@@ -380,24 +159,33 @@ hr {
 
 .buttons {
 	overflow: hidden; /* Float clearing for good browsers */
-	margin-bottom: 20px;
-	font-size: .85em;
+	font-size: 1.1em;
 }
 
 .buttons a.button, .buttons button {
   display: block;
   float: left;
-  background: #22242c url("../images/bg_button_banner.png") bottom center repeat-x;
-  border: 1px solid #4c5163;
+  background: #d4d4d4 url("/images/bg_button.png") repeat-x;
+  margin: 0 9px 0 0;
+  border: 1px solid #b4b4b4;
+  border-top: 1px solid #d4d4d4;
+  border-left: 1px solid #d4d4d4;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 100%;
-  font-weight: normal;
+  font-weight: bold;
+  text-transform: uppercase;
   text-decoration: none;
-  color: #fff;
+  color: #646464;
   cursor: pointer;
-  padding: 9px; /* Links */
+  padding: 5px 10px 6px 7px; /* Links */
   white-space: nowrap;
-  text-align: center;
+}
+
+.buttons object { /* Force inline Flash objects to act like a button */
+  display: block;
+  float: left;
+  margin: 0 9px 0 0;
+  cursor: pointer;
 }
 
 .buttons button {
@@ -405,16 +193,13 @@ hr {
   overflow: visible;
   padding: 4px 10px 3px 7px; /* IE6 */
 }
-
 .buttons button[type] {
   padding: 5px 10px 5px 7px; /* Firefox */
   line-height: 18px; /* Safari */
 }
-
 *:first-child+html button[type] {
   padding: 4px 10px 3px 7px; /* IE7 */
 }
-
 .buttons button img, .buttons a img {
   margin: 0 3px -3px 0 !important;
   padding: 0;
@@ -426,33 +211,70 @@ hr {
 /* =BUTTONS =TWEAKS */
 
 .buttons a.button, .buttons button { /* Safari */
-  -webkit-border-radius: 20px;
+  -webkit-border-radius: 14px;
 }
 
 .buttons a.button, .buttons button, x:-moz-any-link, x:default {
-  -moz-border-radius: 20px;
+  -moz-border-radius: 14px;
 }
 
 /* =BUTTONS =STANDARD */
 
 .buttons button:hover, .buttons a.button:hover, .buttons a.button:active {
-  background: #111216;
-  border: 1px solid #444858;
+  background: #6299c5;
+  border: 1px solid #6299c5;
   color: #fff;
 }
 
-/* =BUTTONS =RESUME */
+/* =BUTTONS =POSITIVE */
 
-button.resume, .buttons a.resume {
-  background: transparent;
-  width: 140px;
-  padding: 8px;
-  border: 2px solid #fae443;
-  color: #555a6e;
+button.positive, .buttons a.positive {
+  color: #529214;
 }
 
-.buttons a.resume:hover, button.resume:hover, .buttons a.resume:active {
-  background: #fae443;
-  border: 2px solid #fae443;
-  color: #565b6e;
+.buttons a.positive:hover, button.positive:hover, .buttons a.positive:active {
+  background: #529214;
+  border: 1px solid #529214;
+  color: #fff;
+}
+
+/* =BUTTONS =NEGATIVE */
+
+.buttons a.negative, button.negative {
+  color: #d12f19;
+}
+
+.buttons a.negative:hover, button.negative:hover, .buttons a.negative:active {
+  background: #d12f19;
+  border: 1px solid #d12f19;
+  color: #fff;
+}
+
+/* =BUTTONS =DISABLED */
+
+.buttons a.disabled, button.disabled {
+  background: #b4b4b4;
+  border: 1px solid #b4b4b4;
+  color: #fff;
+}
+
+.buttons a.disabled:hover, button.disabled:hover {
+  background: #b4b4b4;
+  border: 1px solid #b4b4b4;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+/* =BUTTONS =PASSIVE */
+
+.buttons a.passive {
+  background: none;
+  border: 1px solid transparent;
+  color: #828282;
+}
+
+.buttons a.passive:hover {
+  background: #eee;
+  border: 1px solid #eee;
+  color: #646464;
 }

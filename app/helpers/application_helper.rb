@@ -3,6 +3,6 @@ module ApplicationHelper
   attr_accessor :site_name
   
   def site_name
-    @site_name || 'Pragprog Books'
+    @site_name || 'The Pragmatic Bookshelf'
   end
 end
