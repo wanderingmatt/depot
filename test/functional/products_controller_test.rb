@@ -36,6 +36,19 @@ class ProductsControllerTest < ActionController::TestCase
 
     assert_redirected_to product_path(assigns(:product))
   end
+  
+  test "should error on invalid product" do
+    assert_difference('Product.count', 0) do    
+      post :create, :product => {
+        :title        => '',
+        :description  => 'awesome product description',
+        :image_url    => 'http://example.com/foo.gif',
+        :price        => '100'
+      }
+    end
+    
+    assert_not_nil assigns(:product).errors.on :title
+  end
 
   test "should show product" do
     get :show, :id => products(:one).id
