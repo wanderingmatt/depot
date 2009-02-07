@@ -31,6 +31,18 @@ class StoreControllerTest < ActionController::TestCase
     assert_response :redirect
     assert flash[:notice]
   end
+  
+  test "checkout should succeed with a full cart" do
+    post :add_to_cart, :id => products(:one).id
+    post :checkout
+    assert_response :success
+  end
+  
+  test "checkout should redirect with an empty cart" do
+    post :checkout
+    assert_response :redirect
+    assert flash[:notice]
+  end
 
   test "cart handles invalid id" do
     post :add_to_cart, :id => Product.maximum(:id) + 1

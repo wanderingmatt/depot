@@ -49,7 +49,6 @@ class StoreController < ApplicationController
     end
   end
 
-
   
   private
 
