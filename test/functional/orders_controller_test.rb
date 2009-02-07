@@ -14,10 +14,28 @@ class OrdersControllerTest < ActionController::TestCase
 
   test "should create order" do
     assert_difference('Order.count') do
-      post :create, :order => { }
+      post :create, :order => { 
+        :name     => 'James Howlett', 
+        :address  => 'X-Mansion', 
+        :email    => 'wolverine@x-men.com', 
+        :pay_type => 'check' 
+      }
     end
 
     assert_redirected_to order_path(assigns(:order))
+  end
+  
+  test "should error on invalid order" do
+    assert_difference('Order.count', 0) do    
+      post :create, :order => {
+        :name     => '', 
+        :address  => 'X-Mansion', 
+        :email    => 'wolverine@x-men.com', 
+        :pay_type => 'check'
+      }
+    end
+    
+    assert_not_nil assigns(:order).errors.on :name
   end
 
   test "should show order" do
@@ -31,7 +49,9 @@ class OrdersControllerTest < ActionController::TestCase
   end
 
   test "should update order" do
-    put :update, :id => orders(:one).id, :order => { }
+    put :update, :id => orders(:one).id, :order => { 
+      :pay_type => "cc"    
+    }
     assert_redirected_to order_path(assigns(:order))
   end
 

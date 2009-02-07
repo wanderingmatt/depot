@@ -1,13 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: 
-  address: MyText
-  email: MyString
-  pay_type: MyString
+  name: James Howlett
+  address: X-Mansion
+  email: wolverin@x-men.com
+  pay_type: check
 
 two:
-  name: 
-  address: MyText
-  email: MyString
-  pay_type: MyString
+  name: Scott Summers
+  address: X-Mansion
+  email: cyclops@x-men.com
+  pay_type: po
