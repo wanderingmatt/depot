@@ -1,11 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: Matthew Anderson
-  hashed_password: <%= User.encrypted_password('testable_password', 'wolverine') %>
+  name: James Howlett
+  hashed_password: <%= User.encrypted_password('number1xmen', 'wolverine') %>
   salt: wolverine
 
 two:
-  name: MyString
-  hashed_password: MyString
-  salt: MyString
+  name: Scott Summers
+  hashed_password: <%= User.encrypted_password('number2xmen', 'cyclops') %>
+  salt: cyclops
