@@ -25,6 +25,12 @@ class StoreControllerTest < ActionController::TestCase
     assert_equal 1, cart.items.length
   end
   
+  test "cart handles invalid id" do
+    post :add_to_cart, :id => Product.maximum(:id) + 1
+    assert_response :redirect
+    assert flash[:notice]
+  end
+  
   test "empty_cart empties the cart" do
     post :empty_cart
     assert_nil session[:cart]
@@ -44,9 +50,12 @@ class StoreControllerTest < ActionController::TestCase
     assert flash[:notice]
   end
 
-  test "cart handles invalid id" do
-    post :add_to_cart, :id => Product.maximum(:id) + 1
-    assert_response :redirect
-    assert flash[:notice]
-  end
+  # test "save_order empties cart" do
+  #   @request.session[:cart] = Cart.new
+  #   @request.session[:cart].add_product(products(:one))
+  #   
+  #   post :save_order, :order  => {}
+  #   assert_nil session[:cart]
+  #   assert_redirected_to :controller => :store, :action => 'index'
+  # end
 end

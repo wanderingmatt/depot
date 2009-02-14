@@ -2,10 +2,10 @@
 
 one:
   name: James Howlett
-  hashed_password: <%= User.encrypted_password('number1xmen', 'wolverine') %>
+  hashed_password: <%= User.encrypted_password('coolestxman', 'wolverine') %>
   salt: wolverine
 
 two:
   name: Scott Summers
-  hashed_password: <%= User.encrypted_password('number2xmen', 'cyclops') %>
+  hashed_password: <%= User.encrypted_password('worstxman', 'cyclops') %>
   salt: cyclops

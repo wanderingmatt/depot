@@ -1226,3 +1226,2910 @@ Rendering store/index
 Rendered store/_cart (1.5ms)
 Completed in 6ms (View: 5, DB: 1) | 200 OK [http://test.host/]
   [4;35;1mProduct Load (0.6ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+  [4;36;1mProduct Load (0.7ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.5ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.5ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Load (0.5ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 996332877) [0m
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 996332877) [0m
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 996332877) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "line_items" [0m
+
+
+Processing LineItemsController#create (for 0.0.0.0 at 2009-02-11 19:43:37) [POST]
+  Parameters: {"line_item"=>{"order_id"=>6, "total_price"=>40.0, "product_id"=>1, "quantity"=>2}}
+  [4;35;1mLineItem Create (0.4ms)[0m   [0mINSERT INTO "line_items" ("order_id", "updated_at", "total_price", "product_id", "quantity", "created_at") VALUES(6, '2009-02-12 03:43:37', 40.0, 1, 2, '2009-02-12 03:43:37')[0m
+Redirected to #<LineItem:0x24c96d4>
+Completed in 6ms (DB: 9) | 302 Found [http://test.host/line_items?line_item%5Border_id%5D=6&line_item%5Bproduct_id%5D=1&line_item%5Bquantity%5D=2&line_item%5Btotal_price%5D=40.0]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;36;1mLineItem Load (0.2ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#destroy (for 0.0.0.0 at 2009-02-11 19:43:37) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+  [4;36;1mLineItem Destroy (0.2ms)[0m   [0;1mDELETE FROM "line_items" WHERE "id" = 953125641[0m
+Redirected to http://test.host/line_items
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/line_items/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;36;1mLineItem Load (0.6ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#edit (for 0.0.0.0 at 2009-02-11 19:43:37) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mLineItem Load (0.4ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+Rendering template within layouts/line_items
+Rendering line_items/edit
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://test.host/line_items/953125641/edit]
+
+
+Processing LineItemsController#index (for 0.0.0.0 at 2009-02-11 19:43:37) [GET]
+  [4;36;1mLineItem Load (0.5ms)[0m   [0;1mSELECT * FROM "line_items" [0m
+Rendering template within layouts/line_items
+Rendering line_items/index
+Completed in 4ms (View: 2, DB: 1) | 200 OK [http://test.host/line_items]
+
+
+Processing LineItemsController#new (for 0.0.0.0 at 2009-02-11 19:43:37) [GET]
+Rendering template within layouts/line_items
+Rendering line_items/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/line_items/new]
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#show (for 0.0.0.0 at 2009-02-11 19:43:37) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+Rendering template within layouts/line_items
+Rendering line_items/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/line_items/953125641]
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#update (for 0.0.0.0 at 2009-02-11 19:43:37) [PUT]
+  Parameters: {"id"=>"953125641", "line_item"=>{"quantity"=>2}}
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+  [4;35;1mLineItem Update (0.5ms)[0m   [0mUPDATE "line_items" SET "updated_at" = '2009-02-12 03:43:37', "quantity" = 2 WHERE "id" = 953125641[0m
+Redirected to #<LineItem:0x2453e98>
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/line_items/953125641?line_item%5Bquantity%5D=2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "orders" [0m
+
+
+Processing OrdersController#create (for 0.0.0.0 at 2009-02-11 19:43:37) [POST]
+  Parameters: {"order"=>{"name"=>"James Howlett", "pay_type"=>"check", "address"=>"X-Mansion", "email"=>"wolverine@x-men.com"}}
+  [4;35;1mOrder Create (0.4ms)[0m   [0mINSERT INTO "orders" ("name", "updated_at", "pay_type", "address", "email", "created_at") VALUES('James Howlett', '2009-02-12 03:43:37', 'check', 'X-Mansion', 'wolverine@x-men.com', '2009-02-12 03:43:37')[0m
+Redirected to #<Order:0x243df08>
+Completed in 6ms (DB: 1) | 302 Found [http://test.host/orders?order%5Baddress%5D=X-Mansion&order%5Bemail%5D=wolverine%40x-men.com&order%5Bname%5D=James+Howlett&order%5Bpay_type%5D=check]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;36;1mOrder Load (0.4ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#destroy (for 0.0.0.0 at 2009-02-11 19:43:37) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mOrder Load (0.6ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+  [4;36;1mOrder Destroy (0.4ms)[0m   [0;1mDELETE FROM "orders" WHERE "id" = 953125641[0m
+Redirected to http://test.host/orders
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/orders/953125641]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "orders" [0m
+
+
+Processing OrdersController#create (for 0.0.0.0 at 2009-02-11 19:43:37) [POST]
+  Parameters: {"order"=>{"name"=>"", "pay_type"=>"check", "address"=>"X-Mansion", "email"=>"wolverine@x-men.com"}}
+Rendering template within layouts/orders
+Rendering orders/new
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://test.host/orders?order%5Baddress%5D=X-Mansion&order%5Bemail%5D=wolverine%40x-men.com&order%5Bname%5D=&order%5Bpay_type%5D=check]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;36;1mOrder Load (0.4ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#edit (for 0.0.0.0 at 2009-02-11 19:43:37) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+Rendering template within layouts/orders
+Rendering orders/edit
+Completed in 3ms (View: 3, DB: 1) | 200 OK [http://test.host/orders/953125641/edit]
+
+
+Processing OrdersController#index (for 0.0.0.0 at 2009-02-11 19:43:37) [GET]
+  [4;36;1mOrder Load (0.4ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/orders
+Rendering orders/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/orders]
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2009-02-11 19:43:37) [GET]
+Rendering template within layouts/orders
+Rendering orders/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/orders/new]
+  [4;35;1mOrder Load (0.4ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#show (for 0.0.0.0 at 2009-02-11 19:43:37) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+Rendering template within layouts/orders
+Rendering orders/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/orders/953125641]
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#update (for 0.0.0.0 at 2009-02-11 19:43:37) [PUT]
+  Parameters: {"order"=>{"pay_type"=>"cc"}, "id"=>"953125641"}
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+  [4;35;1mOrder Update (0.3ms)[0m   [0mUPDATE "orders" SET "pay_type" = 'cc', "updated_at" = '2009-02-12 03:43:37' WHERE "id" = 953125641[0m
+Redirected to #<Order:0x236eab4>
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/orders/953125641?order%5Bpay_type%5D=cc]
+  [4;36;1mProduct Load (0.9ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+  [4;35;1mProduct Load (0.7ms)[0m   [0mSELECT * FROM "products" [0m
+  [4;36;1mProduct Load (0.5ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Exists (0.2ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Update (0.5ms)[0m   [0;1mUPDATE "products" SET "price" = 1000.0, "updated_at" = '2009-02-12 03:43:37' WHERE "id" = 953125641[0m
+  [4;35;1mProduct Exists (0.2ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" IS NULL) LIMIT 1[0m
+  [4;36;1mProduct Exists (0.2ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" IS NULL) LIMIT 1[0m
+  [4;35;1mProduct Exists (0.2ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" IS NULL) LIMIT 1[0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Update (0.3ms)[0m   [0;1mUPDATE "products" SET "price" = 1.0, "updated_at" = '2009-02-12 03:43:37' WHERE "id" = 953125641[0m
+  [4;35;1mProduct Load (0.6ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mProduct Exists (0.2ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation') LIMIT 1[0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "products" [0m
+
+
+Processing ProductsController#create (for 0.0.0.0 at 2009-02-11 19:43:37) [POST]
+  Parameters: {"product"=>{"image_url"=>"http://example.com/foo.gif", "title"=>"awesome product", "price"=>"100", "description"=>"awesome product description"}}
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'awesome product') LIMIT 1[0m
+  [4;36;1mProduct Create (0.3ms)[0m   [0;1mINSERT INTO "products" ("image_url", "updated_at", "title", "price", "description", "created_at") VALUES('http://example.com/foo.gif', '2009-02-12 03:43:37', 'awesome product', 100.0, 'awesome product description', '2009-02-12 03:43:37')[0m
+Redirected to #<Product:0x229f264>
+Completed in 5ms (DB: 6) | 302 Found [http://test.host/products?product%5Bdescription%5D=awesome+product+description&product%5Bimage_url%5D=http%3A%2F%2Fexample.com%2Ffoo.gif&product%5Bprice%5D=100&product%5Btitle%5D=awesome+product]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "products" [0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#destroy (for 0.0.0.0 at 2009-02-11 19:43:37) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Destroy (0.2ms)[0m   [0mDELETE FROM "products" WHERE "id" = 953125641[0m
+Redirected to http://test.host/products
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/products/953125641]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "products" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+
+
+Processing ProductsController#create (for 0.0.0.0 at 2009-02-11 19:43:37) [POST]
+  Parameters: {"product"=>{"image_url"=>"http://example.com/foo.gif", "title"=>"", "price"=>"100", "description"=>"awesome product description"}}
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = '') LIMIT 1[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://test.host/products?product%5Bdescription%5D=awesome+product+description&product%5Bimage_url%5D=http%3A%2F%2Fexample.com%2Ffoo.gif&product%5Bprice%5D=100&product%5Btitle%5D=]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#edit (for 0.0.0.0 at 2009-02-11 19:43:37) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/products/953125641/edit]
+
+
+Processing ProductsController#index (for 0.0.0.0 at 2009-02-11 19:43:37) [GET]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/products]
+
+
+Processing ProductsController#new (for 0.0.0.0 at 2009-02-11 19:43:37) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/products/new]
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#show (for 0.0.0.0 at 2009-02-11 19:43:37) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/products/953125641]
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#update (for 0.0.0.0 at 2009-02-11 19:43:37) [PUT]
+  Parameters: {"product"=>{"title"=>"mega awesome title"}, "id"=>"953125641"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'mega awesome title' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;35;1mProduct Update (0.3ms)[0m   [0mUPDATE "products" SET "title" = 'mega awesome title', "updated_at" = '2009-02-12 03:43:37' WHERE "id" = 953125641[0m
+Redirected to #<Product:0x220bde8>
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/products/953125641?product%5Btitle%5D=mega+awesome+title]
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing StoreController#add_to_cart (for 0.0.0.0 at 2009-02-11 19:43:37) [POST]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Redirected to actionindex
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/store/add_to_cart/953125641]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT max("products".id) AS max_id FROM "products" [0m
+
+
+Processing StoreController#add_to_cart (for 0.0.0.0 at 2009-02-11 19:43:37) [POST]
+  Parameters: {"id"=>"996332878"}
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 996332878) [0m
+Attempt to access invalid product 996332878
+Redirected to actionindex
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/store/add_to_cart/996332878]
+
+
+Processing StoreController#checkout (for 0.0.0.0 at 2009-02-11 19:43:37) [POST]
+Redirected to actionindex
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/store/checkout]
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing StoreController#add_to_cart (for 0.0.0.0 at 2009-02-11 19:43:37) [POST]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Redirected to actionindex
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/store/add_to_cart/953125641]
+
+
+Processing StoreController#checkout (for 0.0.0.0 at 2009-02-11 19:43:37) [POST]
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.6ms)
+Rendered store/_cart (2.3ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://test.host/store/add_to_cart/953125641]
+
+
+Processing StoreController#empty_cart (for 0.0.0.0 at 2009-02-11 19:43:37) [POST]
+Redirected to actionindex
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/store/empty_cart]
+
+
+Processing StoreController#index (for 0.0.0.0 at 2009-02-11 19:43:37) [GET]
+  [4;35;1mProduct Load (0.6ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (1.0ms)
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://test.host/]
+
+
+Processing StoreController#index (for 0.0.0.0 at 2009-02-11 19:43:37) [GET]
+  [4;36;1mProduct Load (0.5ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (1.0ms)
+Completed in 5ms (View: 4, DB: 1) | 200 OK [http://test.host/]
+  [4;35;1mProduct Load (0.5ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing StoreController#add_to_cart (for 0.0.0.0 at 2009-02-11 19:45:12) [POST]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Redirected to actionindex
+Completed in 5ms (DB: 3) | 302 Found [http://test.host/store/add_to_cart/953125641]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT max("products".id) AS max_id FROM "products" [0m
+
+
+Processing StoreController#add_to_cart (for 0.0.0.0 at 2009-02-11 19:45:12) [POST]
+  Parameters: {"id"=>"996332878"}
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 996332878) [0m
+Attempt to access invalid product 996332878
+Redirected to actionindex
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/store/add_to_cart/996332878]
+
+
+Processing StoreController#checkout (for 0.0.0.0 at 2009-02-11 19:45:12) [POST]
+Redirected to actionindex
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/store/checkout]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing StoreController#add_to_cart (for 0.0.0.0 at 2009-02-11 19:45:12) [POST]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mProduct Load (4.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Redirected to actionindex
+Completed in 5ms (DB: 4) | 302 Found [http://test.host/store/add_to_cart/953125641]
+
+
+Processing StoreController#checkout (for 0.0.0.0 at 2009-02-11 19:45:12) [POST]
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (4.2ms)
+Rendered store/_cart (6.5ms)
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://test.host/store/add_to_cart/953125641]
+
+
+Processing StoreController#empty_cart (for 0.0.0.0 at 2009-02-11 19:45:12) [POST]
+Redirected to actionindex
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/store/empty_cart]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing StoreController#save_order (for 0.0.0.0 at 2009-02-11 19:45:12) [POST]
+  Parameters: {"order"=>{}}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.5ms)
+Rendered store/_cart (1.7ms)
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://test.host/store/save_order?]
+
+
+Processing StoreController#index (for 0.0.0.0 at 2009-02-11 19:45:12) [GET]
+  [4;35;1mProduct Load (0.7ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (1.1ms)
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://test.host/]
+
+
+Processing StoreController#index (for 0.0.0.0 at 2009-02-11 19:45:12) [GET]
+  [4;36;1mProduct Load (0.7ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (1.1ms)
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://test.host/]
+  [4;35;1mProduct Load (0.6ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+  [4;36;1mProduct Load (0.6ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing StoreController#save_order (for 0.0.0.0 at 2009-02-11 19:45:48) [POST]
+  Parameters: {"order"=>{}}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.7ms)
+Rendered store/_cart (2.5ms)
+Completed in 28ms (View: 9, DB: 58) | 200 OK [http://test.host/store/save_order?]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "line_items" [0m
+
+
+Processing LineItemsController#create (for 0.0.0.0 at 2009-02-11 19:53:34) [POST]
+  Parameters: {"line_item"=>{"order_id"=>6, "total_price"=>40.0, "product_id"=>1, "quantity"=>2}}
+  [4;36;1mLineItem Create (53.9ms)[0m   [0;1mINSERT INTO "line_items" ("order_id", "updated_at", "total_price", "product_id", "quantity", "created_at") VALUES(6, '2009-02-12 03:53:34', 40.0, 1, 2, '2009-02-12 03:53:34')[0m
+Redirected to #<LineItem:0x2502fec>
+Completed in 62ms (DB: 57) | 302 Found [http://test.host/line_items?line_item%5Border_id%5D=6&line_item%5Bproduct_id%5D=1&line_item%5Bquantity%5D=2&line_item%5Btotal_price%5D=40.0]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;35;1mLineItem Load (0.4ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#destroy (for 0.0.0.0 at 2009-02-11 19:53:34) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mLineItem Load (0.5ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+  [4;35;1mLineItem Destroy (0.4ms)[0m   [0mDELETE FROM "line_items" WHERE "id" = 953125641[0m
+Redirected to http://test.host/line_items
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/line_items/953125641]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;35;1mLineItem Load (0.8ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#edit (for 0.0.0.0 at 2009-02-11 19:53:34) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+Rendering template within layouts/line_items
+Rendering line_items/edit
+Completed in 5ms (View: 4, DB: 1) | 200 OK [http://test.host/line_items/953125641/edit]
+
+
+Processing LineItemsController#index (for 0.0.0.0 at 2009-02-11 19:53:34) [GET]
+  [4;35;1mLineItem Load (0.4ms)[0m   [0mSELECT * FROM "line_items" [0m
+Rendering template within layouts/line_items
+Rendering line_items/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/line_items]
+
+
+Processing LineItemsController#new (for 0.0.0.0 at 2009-02-11 19:53:34) [GET]
+Rendering template within layouts/line_items
+Rendering line_items/new
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/line_items/new]
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#show (for 0.0.0.0 at 2009-02-11 19:53:34) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mLineItem Load (0.5ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+Rendering template within layouts/line_items
+Rendering line_items/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/line_items/953125641]
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#update (for 0.0.0.0 at 2009-02-11 19:53:34) [PUT]
+  Parameters: {"id"=>"953125641", "line_item"=>{"quantity"=>2}}
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+  [4;36;1mLineItem Update (0.5ms)[0m   [0;1mUPDATE "line_items" SET "updated_at" = '2009-02-12 03:53:34', "quantity" = 2 WHERE "id" = 953125641[0m
+Redirected to #<LineItem:0x249f5c8>
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/line_items/953125641?line_item%5Bquantity%5D=2]
+  [4;36;1mProduct Load (0.6ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing StoreController#save_order (for 0.0.0.0 at 2009-02-11 19:53:36) [POST]
+  Parameters: {"order"=>{}}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.6ms)
+Rendered store/_cart (2.3ms)
+Completed in 27ms (View: 8, DB: 3) | 200 OK [http://test.host/store/save_order?]
+  [4;36;1mProduct Load (0.5ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Load (0.6ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Load (0.6ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Load (0.6ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.5ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.5ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 996332877) [0m
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.5ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 996332877) [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 996332877) [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "line_items" [0m
+
+
+Processing LineItemsController#create (for 0.0.0.0 at 2009-02-11 19:56:42) [POST]
+  Parameters: {"line_item"=>{"order_id"=>6, "total_price"=>40.0, "quantity"=>2, "product_id"=>1}}
+  [4;35;1mLineItem Create (0.4ms)[0m   [0mINSERT INTO "line_items" ("order_id", "updated_at", "total_price", "product_id", "quantity", "created_at") VALUES(6, '2009-02-12 03:56:42', 40.0, 1, 2, '2009-02-12 03:56:42')[0m
+Redirected to #<LineItem:0x24c2d48>
+Completed in 5ms (DB: 8) | 302 Found [http://test.host/line_items?line_item%5Border_id%5D=6&line_item%5Bproduct_id%5D=1&line_item%5Bquantity%5D=2&line_item%5Btotal_price%5D=40.0]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;36;1mLineItem Load (0.2ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#destroy (for 0.0.0.0 at 2009-02-11 19:56:42) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+  [4;36;1mLineItem Destroy (0.2ms)[0m   [0;1mDELETE FROM "line_items" WHERE "id" = 953125641[0m
+Redirected to http://test.host/line_items
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/line_items/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#edit (for 0.0.0.0 at 2009-02-11 19:56:42) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+Rendering template within layouts/line_items
+Rendering line_items/edit
+Completed in 4ms (View: 4, DB: 1) | 200 OK [http://test.host/line_items/953125641/edit]
+
+
+Processing LineItemsController#index (for 0.0.0.0 at 2009-02-11 19:56:42) [GET]
+  [4;36;1mLineItem Load (0.5ms)[0m   [0;1mSELECT * FROM "line_items" [0m
+Rendering template within layouts/line_items
+Rendering line_items/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/line_items]
+
+
+Processing LineItemsController#new (for 0.0.0.0 at 2009-02-11 19:56:42) [GET]
+Rendering template within layouts/line_items
+Rendering line_items/new
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/line_items/new]
+  [4;35;1mLineItem Load (0.4ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#show (for 0.0.0.0 at 2009-02-11 19:56:42) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+Rendering template within layouts/line_items
+Rendering line_items/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/line_items/953125641]
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#update (for 0.0.0.0 at 2009-02-11 19:56:42) [PUT]
+  Parameters: {"id"=>"953125641", "line_item"=>{"quantity"=>2}}
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+  [4;35;1mLineItem Update (0.5ms)[0m   [0mUPDATE "line_items" SET "updated_at" = '2009-02-12 03:56:42', "quantity" = 2 WHERE "id" = 953125641[0m
+Redirected to #<LineItem:0x244ce18>
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/line_items/953125641?line_item%5Bquantity%5D=2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "orders" [0m
+
+
+Processing OrdersController#create (for 0.0.0.0 at 2009-02-11 19:56:42) [POST]
+  Parameters: {"order"=>{"name"=>"James Howlett", "pay_type"=>"check", "address"=>"X-Mansion", "email"=>"wolverine@x-men.com"}}
+  [4;35;1mOrder Create (0.4ms)[0m   [0mINSERT INTO "orders" ("name", "updated_at", "pay_type", "address", "email", "created_at") VALUES('James Howlett', '2009-02-12 03:56:42', 'check', 'X-Mansion', 'wolverine@x-men.com', '2009-02-12 03:56:42')[0m
+Redirected to #<Order:0x243a68c>
+Completed in 6ms (DB: 1) | 302 Found [http://test.host/orders?order%5Baddress%5D=X-Mansion&order%5Bemail%5D=wolverine%40x-men.com&order%5Bname%5D=James+Howlett&order%5Bpay_type%5D=check]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#destroy (for 0.0.0.0 at 2009-02-11 19:56:42) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+  [4;36;1mOrder Destroy (0.4ms)[0m   [0;1mDELETE FROM "orders" WHERE "id" = 953125641[0m
+Redirected to http://test.host/orders
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/orders/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "orders" [0m
+
+
+Processing OrdersController#create (for 0.0.0.0 at 2009-02-11 19:56:42) [POST]
+  Parameters: {"order"=>{"name"=>"", "pay_type"=>"check", "address"=>"X-Mansion", "email"=>"wolverine@x-men.com"}}
+Rendering template within layouts/orders
+Rendering orders/new
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://test.host/orders?order%5Baddress%5D=X-Mansion&order%5Bemail%5D=wolverine%40x-men.com&order%5Bname%5D=&order%5Bpay_type%5D=check]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#edit (for 0.0.0.0 at 2009-02-11 19:56:42) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+Rendering template within layouts/orders
+Rendering orders/edit
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://test.host/orders/953125641/edit]
+
+
+Processing OrdersController#index (for 0.0.0.0 at 2009-02-11 19:56:42) [GET]
+  [4;36;1mOrder Load (0.4ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/orders
+Rendering orders/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/orders]
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2009-02-11 19:56:42) [GET]
+Rendering template within layouts/orders
+Rendering orders/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/orders/new]
+  [4;35;1mOrder Load (0.5ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#show (for 0.0.0.0 at 2009-02-11 19:56:42) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+Rendering template within layouts/orders
+Rendering orders/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/orders/953125641]
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#update (for 0.0.0.0 at 2009-02-11 19:56:42) [PUT]
+  Parameters: {"order"=>{"pay_type"=>"cc"}, "id"=>"953125641"}
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+  [4;35;1mOrder Update (0.3ms)[0m   [0mUPDATE "orders" SET "pay_type" = 'cc', "updated_at" = '2009-02-12 03:56:42' WHERE "id" = 953125641[0m
+Redirected to #<Order:0x236bc60>
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/orders/953125641?order%5Bpay_type%5D=cc]
+  [4;36;1mProduct Load (0.9ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+  [4;35;1mProduct Load (0.5ms)[0m   [0mSELECT * FROM "products" [0m
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Exists (0.2ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Update (0.4ms)[0m   [0;1mUPDATE "products" SET "price" = 1000.0, "updated_at" = '2009-02-12 03:56:42' WHERE "id" = 953125641[0m
+  [4;35;1mProduct Exists (0.2ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" IS NULL) LIMIT 1[0m
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" IS NULL) LIMIT 1[0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" IS NULL) LIMIT 1[0m
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Update (0.3ms)[0m   [0;1mUPDATE "products" SET "price" = 1.0, "updated_at" = '2009-02-12 03:56:43' WHERE "id" = 953125641[0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation') LIMIT 1[0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "products" [0m
+
+
+Processing ProductsController#create (for 0.0.0.0 at 2009-02-11 19:56:43) [POST]
+  Parameters: {"product"=>{"image_url"=>"http://example.com/foo.gif", "title"=>"awesome product", "price"=>"100", "description"=>"awesome product description"}}
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'awesome product') LIMIT 1[0m
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("image_url", "updated_at", "title", "price", "description", "created_at") VALUES('http://example.com/foo.gif', '2009-02-12 03:56:43', 'awesome product', 100.0, 'awesome product description', '2009-02-12 03:56:43')[0m
+Redirected to #<Product:0x229a980>
+Completed in 6ms (DB: 6) | 302 Found [http://test.host/products?product%5Bdescription%5D=awesome+product+description&product%5Bimage_url%5D=http%3A%2F%2Fexample.com%2Ffoo.gif&product%5Bprice%5D=100&product%5Btitle%5D=awesome+product]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "products" [0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#destroy (for 0.0.0.0 at 2009-02-11 19:56:43) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Destroy (0.2ms)[0m   [0mDELETE FROM "products" WHERE "id" = 953125641[0m
+Redirected to http://test.host/products
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/products/953125641]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "products" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+
+
+Processing ProductsController#create (for 0.0.0.0 at 2009-02-11 19:56:43) [POST]
+  Parameters: {"product"=>{"image_url"=>"http://example.com/foo.gif", "title"=>"", "price"=>"100", "description"=>"awesome product description"}}
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = '') LIMIT 1[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://test.host/products?product%5Bdescription%5D=awesome+product+description&product%5Bimage_url%5D=http%3A%2F%2Fexample.com%2Ffoo.gif&product%5Bprice%5D=100&product%5Btitle%5D=]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#edit (for 0.0.0.0 at 2009-02-11 19:56:43) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 3ms (View: 3, DB: 1) | 200 OK [http://test.host/products/953125641/edit]
+
+
+Processing ProductsController#index (for 0.0.0.0 at 2009-02-11 19:56:43) [GET]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/products]
+
+
+Processing ProductsController#new (for 0.0.0.0 at 2009-02-11 19:56:43) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/products/new]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#show (for 0.0.0.0 at 2009-02-11 19:56:43) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/products/953125641]
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#update (for 0.0.0.0 at 2009-02-11 19:56:43) [PUT]
+  Parameters: {"product"=>{"title"=>"mega awesome title"}, "id"=>"953125641"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'mega awesome title' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;35;1mProduct Update (0.3ms)[0m   [0mUPDATE "products" SET "title" = 'mega awesome title', "updated_at" = '2009-02-12 03:56:43' WHERE "id" = 953125641[0m
+Redirected to #<Product:0x2207504>
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/products/953125641?product%5Btitle%5D=mega+awesome+title]
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing StoreController#add_to_cart (for 0.0.0.0 at 2009-02-11 19:56:43) [POST]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Redirected to actionindex
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/store/add_to_cart/953125641]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT max("products".id) AS max_id FROM "products" [0m
+
+
+Processing StoreController#add_to_cart (for 0.0.0.0 at 2009-02-11 19:56:43) [POST]
+  Parameters: {"id"=>"996332878"}
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 996332878) [0m
+Attempt to access invalid product 996332878
+Redirected to actionindex
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/store/add_to_cart/996332878]
+
+
+Processing StoreController#checkout (for 0.0.0.0 at 2009-02-11 19:56:43) [POST]
+Redirected to actionindex
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/store/checkout]
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing StoreController#add_to_cart (for 0.0.0.0 at 2009-02-11 19:56:43) [POST]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Redirected to actionindex
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/store/add_to_cart/953125641]
+
+
+Processing StoreController#checkout (for 0.0.0.0 at 2009-02-11 19:56:43) [POST]
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.7ms)
+Rendered store/_cart (2.3ms)
+Completed in 8ms (View: 8, DB: 0) | 200 OK [http://test.host/store/add_to_cart/953125641]
+
+
+Processing StoreController#empty_cart (for 0.0.0.0 at 2009-02-11 19:56:43) [POST]
+Redirected to actionindex
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/store/empty_cart]
+
+
+Processing StoreController#index (for 0.0.0.0 at 2009-02-11 19:56:43) [GET]
+  [4;35;1mProduct Load (0.6ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (1.0ms)
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://test.host/]
+
+
+Processing StoreController#index (for 0.0.0.0 at 2009-02-11 19:56:43) [GET]
+  [4;36;1mProduct Load (0.6ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (1.1ms)
+Completed in 5ms (View: 4, DB: 1) | 200 OK [http://test.host/]
+  [4;35;1mProduct Load (0.5ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+  [4;36;1mProduct Load (0.6ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.5ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "line_items" [0m
+
+
+Processing LineItemsController#create (for 0.0.0.0 at 2009-02-11 19:57:27) [POST]
+  Parameters: {"line_item"=>{"order_id"=>6, "total_price"=>40.0, "product_id"=>1, "quantity"=>2}}
+  [4;35;1mLineItem Create (0.5ms)[0m   [0mINSERT INTO "line_items" ("order_id", "updated_at", "total_price", "product_id", "quantity", "created_at") VALUES(6, '2009-02-12 03:57:27', 40.0, 1, 2, '2009-02-12 03:57:27')[0m
+Redirected to #<LineItem:0x24f40dc>
+Completed in 5ms (DB: 4) | 302 Found [http://test.host/line_items?line_item%5Border_id%5D=6&line_item%5Bproduct_id%5D=1&line_item%5Bquantity%5D=2&line_item%5Btotal_price%5D=40.0]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;36;1mLineItem Load (0.5ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#destroy (for 0.0.0.0 at 2009-02-11 19:57:27) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mLineItem Load (0.4ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+  [4;36;1mLineItem Destroy (0.3ms)[0m   [0;1mDELETE FROM "line_items" WHERE "id" = 953125641[0m
+Redirected to http://test.host/line_items
+Completed in 2ms (DB: 2) | 302 Found [http://test.host/line_items/953125641]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;36;1mLineItem Load (0.5ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#edit (for 0.0.0.0 at 2009-02-11 19:57:27) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+Rendering template within layouts/line_items
+Rendering line_items/edit
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/line_items/953125641/edit]
+
+
+Processing LineItemsController#index (for 0.0.0.0 at 2009-02-11 19:57:27) [GET]
+  [4;36;1mLineItem Load (0.4ms)[0m   [0;1mSELECT * FROM "line_items" [0m
+Rendering template within layouts/line_items
+Rendering line_items/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/line_items]
+
+
+Processing LineItemsController#new (for 0.0.0.0 at 2009-02-11 19:57:27) [GET]
+Rendering template within layouts/line_items
+Rendering line_items/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/line_items/new]
+  [4;35;1mLineItem Load (0.4ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#show (for 0.0.0.0 at 2009-02-11 19:57:27) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+Rendering template within layouts/line_items
+Rendering line_items/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/line_items/953125641]
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#update (for 0.0.0.0 at 2009-02-11 19:57:27) [PUT]
+  Parameters: {"id"=>"953125641", "line_item"=>{"quantity"=>2}}
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+  [4;35;1mLineItem Update (0.5ms)[0m   [0mUPDATE "line_items" SET "updated_at" = '2009-02-12 03:57:27', "quantity" = 2 WHERE "id" = 953125641[0m
+Redirected to #<LineItem:0x24907bc>
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/line_items/953125641?line_item%5Bquantity%5D=2]
+  [4;36;1mProduct Load (0.6ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.5ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mLineItem Load (0.5ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "line_items" [0m
+
+
+Processing LineItemsController#create (for 0.0.0.0 at 2009-02-11 20:00:11) [POST]
+  Parameters: {"line_item"=>{"order_id"=>6, "total_price"=>40.0, "product_id"=>1, "quantity"=>2}}
+  [4;35;1mLineItem Create (66.8ms)[0m   [0mINSERT INTO "line_items" ("order_id", "updated_at", "total_price", "product_id", "quantity", "created_at") VALUES(6, '2009-02-12 04:00:11', 40.0, 1, 2, '2009-02-12 04:00:11')[0m
+Redirected to #<LineItem:0x24edda4>
+Completed in 72ms (DB: 71) | 302 Found [http://test.host/line_items?line_item%5Border_id%5D=6&line_item%5Bproduct_id%5D=1&line_item%5Bquantity%5D=2&line_item%5Btotal_price%5D=40.0]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;36;1mLineItem Load (0.5ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#destroy (for 0.0.0.0 at 2009-02-11 20:00:11) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mLineItem Load (0.4ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+  [4;36;1mLineItem Destroy (0.4ms)[0m   [0;1mDELETE FROM "line_items" WHERE "id" = 953125641[0m
+Redirected to http://test.host/line_items
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/line_items/953125641]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;36;1mLineItem Load (0.7ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#edit (for 0.0.0.0 at 2009-02-11 20:00:11) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mLineItem Load (0.5ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+Rendering template within layouts/line_items
+Rendering line_items/edit
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://test.host/line_items/953125641/edit]
+
+
+Processing LineItemsController#index (for 0.0.0.0 at 2009-02-11 20:00:11) [GET]
+  [4;36;1mLineItem Load (0.5ms)[0m   [0;1mSELECT * FROM "line_items" [0m
+Rendering template within layouts/line_items
+Rendering line_items/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://test.host/line_items]
+
+
+Processing LineItemsController#new (for 0.0.0.0 at 2009-02-11 20:00:11) [GET]
+Rendering template within layouts/line_items
+Rendering line_items/new
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/line_items/new]
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#show (for 0.0.0.0 at 2009-02-11 20:00:11) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+Rendering template within layouts/line_items
+Rendering line_items/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/line_items/953125641]
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#update (for 0.0.0.0 at 2009-02-11 20:00:11) [PUT]
+  Parameters: {"id"=>"953125641", "line_item"=>{"quantity"=>2}}
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+  [4;35;1mLineItem Update (0.6ms)[0m   [0mUPDATE "line_items" SET "updated_at" = '2009-02-12 04:00:11', "quantity" = 2 WHERE "id" = 953125641[0m
+Redirected to #<LineItem:0x2487414>
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/line_items/953125641?line_item%5Bquantity%5D=2]
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.7ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.6ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 996332877) [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 996332877) [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.5ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 996332877) [0m
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "line_items" [0m
+
+
+Processing LineItemsController#create (for 0.0.0.0 at 2009-02-13 20:56:03) [POST]
+  Parameters: {"line_item"=>{"order_id"=>6, "total_price"=>40.0, "product_id"=>1, "quantity"=>2}}
+  [4;35;1mLineItem Create (0.9ms)[0m   [0mINSERT INTO "line_items" ("order_id", "updated_at", "total_price", "product_id", "quantity", "created_at") VALUES(6, '2009-02-14 04:56:03', 40.0, 1, 2, '2009-02-14 04:56:03')[0m
+Redirected to #<LineItem:0x24b6d40>
+Completed in 6ms (DB: 9) | 302 Found [http://test.host/line_items?line_item%5Border_id%5D=6&line_item%5Bproduct_id%5D=1&line_item%5Bquantity%5D=2&line_item%5Btotal_price%5D=40.0]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#destroy (for 0.0.0.0 at 2009-02-13 20:56:03) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+  [4;36;1mLineItem Destroy (0.4ms)[0m   [0;1mDELETE FROM "line_items" WHERE "id" = 953125641[0m
+Redirected to http://test.host/line_items
+Completed in 2ms (DB: 2) | 302 Found [http://test.host/line_items/953125641]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#edit (for 0.0.0.0 at 2009-02-13 20:56:03) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+Rendering template within layouts/line_items
+Rendering line_items/edit
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://test.host/line_items/953125641/edit]
+
+
+Processing LineItemsController#index (for 0.0.0.0 at 2009-02-13 20:56:03) [GET]
+  [4;36;1mLineItem Load (0.5ms)[0m   [0;1mSELECT * FROM "line_items" [0m
+Rendering template within layouts/line_items
+Rendering line_items/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://test.host/line_items]
+
+
+Processing LineItemsController#new (for 0.0.0.0 at 2009-02-13 20:56:03) [GET]
+Rendering template within layouts/line_items
+Rendering line_items/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://test.host/line_items/new]
+  [4;35;1mLineItem Load (0.8ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#show (for 0.0.0.0 at 2009-02-13 20:56:03) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+Rendering template within layouts/line_items
+Rendering line_items/show
+Completed in 5ms (View: 4, DB: 1) | 200 OK [http://test.host/line_items/953125641]
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#update (for 0.0.0.0 at 2009-02-13 20:56:03) [PUT]
+  Parameters: {"id"=>"953125641", "line_item"=>{"quantity"=>2}}
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+  [4;35;1mLineItem Update (0.7ms)[0m   [0mUPDATE "line_items" SET "updated_at" = '2009-02-14 04:56:03', "quantity" = 2 WHERE "id" = 953125641[0m
+Redirected to #<LineItem:0x243d760>
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/line_items/953125641?line_item%5Bquantity%5D=2]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "orders" [0m
+
+
+Processing OrdersController#create (for 0.0.0.0 at 2009-02-13 20:56:03) [POST]
+  Parameters: {"order"=>{"name"=>"James Howlett", "pay_type"=>"check", "address"=>"X-Mansion", "email"=>"wolverine@x-men.com"}}
+  [4;35;1mOrder Create (0.5ms)[0m   [0mINSERT INTO "orders" ("name", "updated_at", "pay_type", "address", "email", "created_at") VALUES('James Howlett', '2009-02-14 04:56:03', 'check', 'X-Mansion', 'wolverine@x-men.com', '2009-02-14 04:56:03')[0m
+Redirected to #<Order:0x242b31c>
+Completed in 6ms (DB: 1) | 302 Found [http://test.host/orders?order%5Baddress%5D=X-Mansion&order%5Bemail%5D=wolverine%40x-men.com&order%5Bname%5D=James+Howlett&order%5Bpay_type%5D=check]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#destroy (for 0.0.0.0 at 2009-02-13 20:56:03) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mOrder Load (0.4ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+  [4;36;1mOrder Destroy (0.3ms)[0m   [0;1mDELETE FROM "orders" WHERE "id" = 953125641[0m
+Redirected to http://test.host/orders
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/orders/953125641]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "orders" [0m
+
+
+Processing OrdersController#create (for 0.0.0.0 at 2009-02-13 20:56:03) [POST]
+  Parameters: {"order"=>{"name"=>"", "pay_type"=>"check", "address"=>"X-Mansion", "email"=>"wolverine@x-men.com"}}
+Rendering template within layouts/orders
+Rendering orders/new
+Completed in 58ms (View: 3, DB: 1) | 200 OK [http://test.host/orders?order%5Baddress%5D=X-Mansion&order%5Bemail%5D=wolverine%40x-men.com&order%5Bname%5D=&order%5Bpay_type%5D=check]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#edit (for 0.0.0.0 at 2009-02-13 20:56:04) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+Rendering template within layouts/orders
+Rendering orders/edit
+Completed in 3ms (View: 3, DB: 1) | 200 OK [http://test.host/orders/953125641/edit]
+
+
+Processing OrdersController#index (for 0.0.0.0 at 2009-02-13 20:56:04) [GET]
+  [4;36;1mOrder Load (0.4ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/orders
+Rendering orders/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/orders]
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2009-02-13 20:56:04) [GET]
+Rendering template within layouts/orders
+Rendering orders/new
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/orders/new]
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#show (for 0.0.0.0 at 2009-02-13 20:56:04) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+Rendering template within layouts/orders
+Rendering orders/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/orders/953125641]
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#update (for 0.0.0.0 at 2009-02-13 20:56:04) [PUT]
+  Parameters: {"order"=>{"pay_type"=>"cc"}, "id"=>"953125641"}
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+  [4;35;1mOrder Update (0.4ms)[0m   [0mUPDATE "orders" SET "pay_type" = 'cc', "updated_at" = '2009-02-14 04:56:04' WHERE "id" = 953125641[0m
+Redirected to #<Order:0x235bf2c>
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/orders/953125641?order%5Bpay_type%5D=cc]
+  [4;36;1mProduct Load (0.6ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Update (0.3ms)[0m   [0;1mUPDATE "products" SET "price" = 1000.0, "updated_at" = '2009-02-14 04:56:04' WHERE "id" = 953125641[0m
+  [4;35;1mProduct Exists (0.2ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" IS NULL) LIMIT 1[0m
+  [4;36;1mProduct Exists (0.2ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" IS NULL) LIMIT 1[0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" IS NULL) LIMIT 1[0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Update (0.4ms)[0m   [0;1mUPDATE "products" SET "price" = 1.0, "updated_at" = '2009-02-14 04:56:04' WHERE "id" = 953125641[0m
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation') LIMIT 1[0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "products" [0m
+
+
+Processing ProductsController#create (for 0.0.0.0 at 2009-02-13 20:56:04) [POST]
+  Parameters: {"product"=>{"image_url"=>"http://example.com/foo.gif", "title"=>"awesome product", "price"=>"100", "description"=>"awesome product description"}}
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'awesome product') LIMIT 1[0m
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("image_url", "updated_at", "title", "price", "description", "created_at") VALUES('http://example.com/foo.gif', '2009-02-14 04:56:04', 'awesome product', 100.0, 'awesome product description', '2009-02-14 04:56:04')[0m
+Redirected to #<Product:0x2291df8>
+Completed in 5ms (DB: 5) | 302 Found [http://test.host/products?product%5Bdescription%5D=awesome+product+description&product%5Bimage_url%5D=http%3A%2F%2Fexample.com%2Ffoo.gif&product%5Bprice%5D=100&product%5Btitle%5D=awesome+product]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "products" [0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#destroy (for 0.0.0.0 at 2009-02-13 20:56:04) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Destroy (0.3ms)[0m   [0mDELETE FROM "products" WHERE "id" = 953125641[0m
+Redirected to http://test.host/products
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/products/953125641]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "products" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+
+
+Processing ProductsController#create (for 0.0.0.0 at 2009-02-13 20:56:04) [POST]
+  Parameters: {"product"=>{"image_url"=>"http://example.com/foo.gif", "title"=>"", "price"=>"100", "description"=>"awesome product description"}}
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = '') LIMIT 1[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://test.host/products?product%5Bdescription%5D=awesome+product+description&product%5Bimage_url%5D=http%3A%2F%2Fexample.com%2Ffoo.gif&product%5Bprice%5D=100&product%5Btitle%5D=]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#edit (for 0.0.0.0 at 2009-02-13 20:56:04) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/products/953125641/edit]
+
+
+Processing ProductsController#index (for 0.0.0.0 at 2009-02-13 20:56:04) [GET]
+  [4;36;1mProduct Load (0.5ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+Completed in 5ms (View: 3, DB: 1) | 200 OK [http://test.host/products]
+
+
+Processing ProductsController#new (for 0.0.0.0 at 2009-02-13 20:56:04) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/products/new]
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#show (for 0.0.0.0 at 2009-02-13 20:56:04) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/products/953125641]
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#update (for 0.0.0.0 at 2009-02-13 20:56:04) [PUT]
+  Parameters: {"product"=>{"title"=>"mega awesome title"}, "id"=>"953125641"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'mega awesome title' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;35;1mProduct Update (0.3ms)[0m   [0mUPDATE "products" SET "title" = 'mega awesome title', "updated_at" = '2009-02-14 04:56:04' WHERE "id" = 953125641[0m
+Redirected to #<Product:0x21fe97c>
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/products/953125641?product%5Btitle%5D=mega+awesome+title]
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing StoreController#add_to_cart (for 0.0.0.0 at 2009-02-13 20:56:04) [POST]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Redirected to actionindex
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/store/add_to_cart/953125641]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT max("products".id) AS max_id FROM "products" [0m
+
+
+Processing StoreController#add_to_cart (for 0.0.0.0 at 2009-02-13 20:56:04) [POST]
+  Parameters: {"id"=>"996332878"}
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 996332878) [0m
+Attempt to access invalid product 996332878
+Redirected to actionindex
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/store/add_to_cart/996332878]
+
+
+Processing StoreController#checkout (for 0.0.0.0 at 2009-02-13 20:56:04) [POST]
+Redirected to actionindex
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/store/checkout]
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing StoreController#add_to_cart (for 0.0.0.0 at 2009-02-13 20:56:04) [POST]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Redirected to actionindex
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/store/add_to_cart/953125641]
+
+
+Processing StoreController#checkout (for 0.0.0.0 at 2009-02-13 20:56:04) [POST]
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.6ms)
+Rendered store/_cart (2.2ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://test.host/store/add_to_cart/953125641]
+
+
+Processing StoreController#empty_cart (for 0.0.0.0 at 2009-02-13 20:56:04) [POST]
+Redirected to actionindex
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/store/empty_cart]
+
+
+Processing StoreController#index (for 0.0.0.0 at 2009-02-13 20:56:04) [GET]
+  [4;35;1mProduct Load (0.8ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (1.0ms)
+Completed in 7ms (View: 6, DB: 1) | 200 OK [http://test.host/]
+
+
+Processing StoreController#index (for 0.0.0.0 at 2009-02-13 20:56:04) [GET]
+  [4;36;1mProduct Load (0.6ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (1.0ms)
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://test.host/]
+  [4;35;1mProduct Load (0.5ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-02-13 20:56:04) [POST]
+  Parameters: {"user"=>{}}
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" IS NULL) LIMIT 1[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://test.host/users?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#destroy (for 0.0.0.0 at 2009-02-13 20:56:04) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+  [4;36;1mUser Destroy (0.3ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 953125641[0m
+Redirected to http://test.host/users
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/users/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#edit (for 0.0.0.0 at 2009-02-13 20:56:04) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+Rendering template within layouts/users
+Rendering users/edit
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/users/953125641/edit]
+
+
+Processing UsersController#index (for 0.0.0.0 at 2009-02-13 20:56:04) [GET]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 4ms (View: 2, DB: 1) | 200 OK [http://test.host/users]
+
+
+Processing UsersController#new (for 0.0.0.0 at 2009-02-13 20:56:04) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/users/new]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#show (for 0.0.0.0 at 2009-02-13 20:56:04) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 3ms (View: 1, DB: 1) | 200 OK [http://test.host/users/953125641]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#update (for 0.0.0.0 at 2009-02-13 20:56:04) [PUT]
+  Parameters: {"user"=>{}, "id"=>"953125641"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = 'James Howlett' AND "users".id <> 953125641) LIMIT 1[0m
+Redirected to actionindex
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/users/953125641?]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-02-13 21:03:41) [POST]
+  Parameters: {"user"=>{}}
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" IS NULL) LIMIT 1[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 15ms (View: 4, DB: 2) | 200 OK [http://test.host/users?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#update (for 0.0.0.0 at 2009-02-13 21:03:41) [PUT]
+  Parameters: {"user"=>{"name"=>"Logan"}, "id"=>"953125641"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = 'Logan' AND "users".id <> 953125641) LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "name" = 'Logan', "updated_at" = '2009-02-14 05:03:41' WHERE "id" = 953125641[0m
+Redirected to actionindex
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/users/953125641?user%5Bname%5D=Logan]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-02-13 21:06:10) [POST]
+  Parameters: {"user"=>{}}
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" IS NULL) LIMIT 1[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 19ms (View: 4, DB: 3) | 200 OK [http://test.host/users?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#update (for 0.0.0.0 at 2009-02-13 21:06:10) [PUT]
+  Parameters: {"user"=>{"name"=>"Logan"}, "id"=>"953125641"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = 'Logan' AND "users".id <> 953125641) LIMIT 1[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE "users" SET "name" = 'Logan', "updated_at" = '2009-02-14 05:06:10' WHERE "id" = 953125641[0m
+Redirected to actionindex
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/users/953125641?user%5Bname%5D=Logan]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-02-13 21:06:26) [POST]
+  Parameters: {"user"=>{}}
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" IS NULL) LIMIT 1[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 19ms (View: 4, DB: 3) | 200 OK [http://test.host/users?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-02-13 21:07:18) [POST]
+  Parameters: {"user"=>{"name"=>"James Howlett", "password_confirmation"=>"number1xmen", "password"=>"number1xmen"}}
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = 'James Howlett') LIMIT 1[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 16ms (View: 3, DB: 3) | 200 OK [http://test.host/users?user%5Bname%5D=James+Howlett&user%5Bpassword%5D=number1xmen&user%5Bpassword_confirmation%5D=number1xmen]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-02-13 21:07:47) [POST]
+  Parameters: {"user"=>{"name"=>"James Howlett", "password_confirmation"=>"number1xmen", "password"=>"number1xmen"}}
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = 'James Howlett') LIMIT 1[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 15ms (View: 4, DB: 3) | 200 OK [http://test.host/users?user%5Bname%5D=James+Howlett&user%5Bpassword%5D=number1xmen&user%5Bpassword_confirmation%5D=number1xmen]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mProduct Load (0.5ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Load (0.5ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 996332877) [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 996332877) [0m
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 996332877) [0m
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "line_items" [0m
+
+
+Processing LineItemsController#create (for 0.0.0.0 at 2009-02-13 21:10:10) [POST]
+  Parameters: {"line_item"=>{"order_id"=>6, "total_price"=>40.0, "quantity"=>2, "product_id"=>1}}
+  [4;35;1mLineItem Create (0.4ms)[0m   [0mINSERT INTO "line_items" ("order_id", "updated_at", "total_price", "product_id", "quantity", "created_at") VALUES(6, '2009-02-14 05:10:10', 40.0, 1, 2, '2009-02-14 05:10:10')[0m
+Redirected to #<LineItem:0x24bacd8>
+Completed in 5ms (DB: 9) | 302 Found [http://test.host/line_items?line_item%5Border_id%5D=6&line_item%5Bproduct_id%5D=1&line_item%5Bquantity%5D=2&line_item%5Btotal_price%5D=40.0]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;36;1mLineItem Load (0.2ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#destroy (for 0.0.0.0 at 2009-02-13 21:10:10) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+  [4;36;1mLineItem Destroy (0.2ms)[0m   [0;1mDELETE FROM "line_items" WHERE "id" = 953125641[0m
+Redirected to http://test.host/line_items
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/line_items/953125641]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;36;1mLineItem Load (0.4ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#edit (for 0.0.0.0 at 2009-02-13 21:10:10) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+Rendering template within layouts/line_items
+Rendering line_items/edit
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/line_items/953125641/edit]
+
+
+Processing LineItemsController#index (for 0.0.0.0 at 2009-02-13 21:10:10) [GET]
+  [4;36;1mLineItem Load (0.4ms)[0m   [0;1mSELECT * FROM "line_items" [0m
+Rendering template within layouts/line_items
+Rendering line_items/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/line_items]
+
+
+Processing LineItemsController#new (for 0.0.0.0 at 2009-02-13 21:10:10) [GET]
+Rendering template within layouts/line_items
+Rendering line_items/new
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/line_items/new]
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#show (for 0.0.0.0 at 2009-02-13 21:10:10) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+Rendering template within layouts/line_items
+Rendering line_items/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/line_items/953125641]
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#update (for 0.0.0.0 at 2009-02-13 21:10:10) [PUT]
+  Parameters: {"id"=>"953125641", "line_item"=>{"quantity"=>2}}
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+  [4;35;1mLineItem Update (0.6ms)[0m   [0mUPDATE "line_items" SET "updated_at" = '2009-02-14 05:10:10', "quantity" = 2 WHERE "id" = 953125641[0m
+Redirected to #<LineItem:0x2441338>
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/line_items/953125641?line_item%5Bquantity%5D=2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "orders" [0m
+
+
+Processing OrdersController#create (for 0.0.0.0 at 2009-02-13 21:10:10) [POST]
+  Parameters: {"order"=>{"name"=>"James Howlett", "pay_type"=>"check", "address"=>"X-Mansion", "email"=>"wolverine@x-men.com"}}
+  [4;35;1mOrder Create (0.4ms)[0m   [0mINSERT INTO "orders" ("name", "updated_at", "pay_type", "address", "email", "created_at") VALUES('James Howlett', '2009-02-14 05:10:10', 'check', 'X-Mansion', 'wolverine@x-men.com', '2009-02-14 05:10:10')[0m
+Redirected to #<Order:0x242ed28>
+Completed in 6ms (DB: 1) | 302 Found [http://test.host/orders?order%5Baddress%5D=X-Mansion&order%5Bemail%5D=wolverine%40x-men.com&order%5Bname%5D=James+Howlett&order%5Bpay_type%5D=check]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#destroy (for 0.0.0.0 at 2009-02-13 21:10:10) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+  [4;36;1mOrder Destroy (0.3ms)[0m   [0;1mDELETE FROM "orders" WHERE "id" = 953125641[0m
+Redirected to http://test.host/orders
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/orders/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "orders" [0m
+
+
+Processing OrdersController#create (for 0.0.0.0 at 2009-02-13 21:10:10) [POST]
+  Parameters: {"order"=>{"name"=>"", "pay_type"=>"check", "address"=>"X-Mansion", "email"=>"wolverine@x-men.com"}}
+Rendering template within layouts/orders
+Rendering orders/new
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://test.host/orders?order%5Baddress%5D=X-Mansion&order%5Bemail%5D=wolverine%40x-men.com&order%5Bname%5D=&order%5Bpay_type%5D=check]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#edit (for 0.0.0.0 at 2009-02-13 21:10:10) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+Rendering template within layouts/orders
+Rendering orders/edit
+Completed in 3ms (View: 3, DB: 1) | 200 OK [http://test.host/orders/953125641/edit]
+
+
+Processing OrdersController#index (for 0.0.0.0 at 2009-02-13 21:10:10) [GET]
+  [4;36;1mOrder Load (0.4ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/orders
+Rendering orders/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/orders]
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2009-02-13 21:10:10) [GET]
+Rendering template within layouts/orders
+Rendering orders/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/orders/new]
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#show (for 0.0.0.0 at 2009-02-13 21:10:10) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+Rendering template within layouts/orders
+Rendering orders/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/orders/953125641]
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#update (for 0.0.0.0 at 2009-02-13 21:10:10) [PUT]
+  Parameters: {"order"=>{"pay_type"=>"cc"}, "id"=>"953125641"}
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+  [4;35;1mOrder Update (0.4ms)[0m   [0mUPDATE "orders" SET "pay_type" = 'cc', "updated_at" = '2009-02-14 05:10:10' WHERE "id" = 953125641[0m
+Redirected to #<Order:0x235f17c>
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/orders/953125641?order%5Bpay_type%5D=cc]
+  [4;36;1mProduct Load (0.5ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Update (0.2ms)[0m   [0;1mUPDATE "products" SET "price" = 1000.0, "updated_at" = '2009-02-14 05:10:10' WHERE "id" = 953125641[0m
+  [4;35;1mProduct Exists (0.2ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" IS NULL) LIMIT 1[0m
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" IS NULL) LIMIT 1[0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" IS NULL) LIMIT 1[0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Update (0.7ms)[0m   [0;1mUPDATE "products" SET "price" = 1.0, "updated_at" = '2009-02-14 05:10:10' WHERE "id" = 953125641[0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation') LIMIT 1[0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "products" [0m
+
+
+Processing ProductsController#create (for 0.0.0.0 at 2009-02-13 21:10:10) [POST]
+  Parameters: {"product"=>{"image_url"=>"http://example.com/foo.gif", "title"=>"awesome product", "price"=>"100", "description"=>"awesome product description"}}
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'awesome product') LIMIT 1[0m
+  [4;36;1mProduct Create (0.3ms)[0m   [0;1mINSERT INTO "products" ("image_url", "updated_at", "title", "price", "description", "created_at") VALUES('http://example.com/foo.gif', '2009-02-14 05:10:10', 'awesome product', 100.0, 'awesome product description', '2009-02-14 05:10:10')[0m
+Redirected to #<Product:0x2293338>
+Completed in 5ms (DB: 5) | 302 Found [http://test.host/products?product%5Bdescription%5D=awesome+product+description&product%5Bimage_url%5D=http%3A%2F%2Fexample.com%2Ffoo.gif&product%5Bprice%5D=100&product%5Btitle%5D=awesome+product]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "products" [0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#destroy (for 0.0.0.0 at 2009-02-13 21:10:10) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Destroy (0.2ms)[0m   [0mDELETE FROM "products" WHERE "id" = 953125641[0m
+Redirected to http://test.host/products
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/products/953125641]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "products" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+
+
+Processing ProductsController#create (for 0.0.0.0 at 2009-02-13 21:10:10) [POST]
+  Parameters: {"product"=>{"image_url"=>"http://example.com/foo.gif", "title"=>"", "price"=>"100", "description"=>"awesome product description"}}
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = '') LIMIT 1[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://test.host/products?product%5Bdescription%5D=awesome+product+description&product%5Bimage_url%5D=http%3A%2F%2Fexample.com%2Ffoo.gif&product%5Bprice%5D=100&product%5Btitle%5D=]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#edit (for 0.0.0.0 at 2009-02-13 21:10:10) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/products/953125641/edit]
+
+
+Processing ProductsController#index (for 0.0.0.0 at 2009-02-13 21:10:10) [GET]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/products]
+
+
+Processing ProductsController#new (for 0.0.0.0 at 2009-02-13 21:10:10) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/products/new]
+  [4;36;1mProduct Load (0.5ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#show (for 0.0.0.0 at 2009-02-13 21:10:10) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/products/953125641]
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#update (for 0.0.0.0 at 2009-02-13 21:10:10) [PUT]
+  Parameters: {"product"=>{"title"=>"mega awesome title"}, "id"=>"953125641"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'mega awesome title' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;35;1mProduct Update (0.4ms)[0m   [0mUPDATE "products" SET "title" = 'mega awesome title', "updated_at" = '2009-02-14 05:10:10' WHERE "id" = 953125641[0m
+Redirected to #<Product:0x21ffebc>
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/products/953125641?product%5Btitle%5D=mega+awesome+title]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.6ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing StoreController#add_to_cart (for 0.0.0.0 at 2009-02-13 21:10:10) [POST]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Redirected to actionindex
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/store/add_to_cart/953125641]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT max("products".id) AS max_id FROM "products" [0m
+
+
+Processing StoreController#add_to_cart (for 0.0.0.0 at 2009-02-13 21:10:10) [POST]
+  Parameters: {"id"=>"996332878"}
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 996332878) [0m
+Attempt to access invalid product 996332878
+Redirected to actionindex
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/store/add_to_cart/996332878]
+
+
+Processing StoreController#checkout (for 0.0.0.0 at 2009-02-13 21:10:10) [POST]
+Redirected to actionindex
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/store/checkout]
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing StoreController#add_to_cart (for 0.0.0.0 at 2009-02-13 21:10:10) [POST]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Redirected to actionindex
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/store/add_to_cart/953125641]
+
+
+Processing StoreController#checkout (for 0.0.0.0 at 2009-02-13 21:10:10) [POST]
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.6ms)
+Rendered store/_cart (2.1ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://test.host/store/add_to_cart/953125641]
+
+
+Processing StoreController#empty_cart (for 0.0.0.0 at 2009-02-13 21:10:10) [POST]
+Redirected to actionindex
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/store/empty_cart]
+
+
+Processing StoreController#index (for 0.0.0.0 at 2009-02-13 21:10:10) [GET]
+  [4;35;1mProduct Load (0.6ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (1.0ms)
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://test.host/]
+
+
+Processing StoreController#index (for 0.0.0.0 at 2009-02-13 21:10:10) [GET]
+  [4;36;1mProduct Load (0.6ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (1.0ms)
+Completed in 5ms (View: 4, DB: 1) | 200 OK [http://test.host/]
+  [4;35;1mProduct Load (0.5ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-02-13 21:10:10) [POST]
+  Parameters: {"user"=>{"name"=>"Bob Smith", "password_confirmation"=>"test", "password"=>"test"}}
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = 'Bob Smith') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "updated_at", "hashed_password", "created_at") VALUES('Bob Smith', '175097800.53929340613023', '2009-02-14 05:10:10', '850c433901c46e0e0469efbe93f40b592f04c164', '2009-02-14 05:10:10')[0m
+Redirected to actionindex
+Completed in 6ms (DB: 1) | 302 Found [http://test.host/users?user%5Bname%5D=Bob+Smith&user%5Bpassword%5D=test&user%5Bpassword_confirmation%5D=test]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#destroy (for 0.0.0.0 at 2009-02-13 21:10:10) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+  [4;35;1mUser Destroy (0.2ms)[0m   [0mDELETE FROM "users" WHERE "id" = 953125641[0m
+Redirected to http://test.host/users
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/users/953125641]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#edit (for 0.0.0.0 at 2009-02-13 21:10:10) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+Rendering template within layouts/users
+Rendering users/edit
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/users/953125641/edit]
+
+
+Processing UsersController#index (for 0.0.0.0 at 2009-02-13 21:10:10) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://test.host/users]
+
+
+Processing UsersController#new (for 0.0.0.0 at 2009-02-13 21:10:10) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/users/new]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#show (for 0.0.0.0 at 2009-02-13 21:10:10) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/users/953125641]
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#update (for 0.0.0.0 at 2009-02-13 21:10:10) [PUT]
+  Parameters: {"user"=>{"name"=>"Logan"}, "id"=>"953125641"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."name" = 'Logan' AND "users".id <> 953125641) LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "name" = 'Logan', "updated_at" = '2009-02-14 05:10:10' WHERE "id" = 953125641[0m
+Redirected to actionindex
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/users/953125641?user%5Bname%5D=Logan]
+  [4;36;1mProduct Load (0.6ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.6ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 996332877) [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 996332877) [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (2.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 996332877) [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "line_items" [0m
+
+
+Processing LineItemsController#create (for 0.0.0.0 at 2009-02-13 21:10:13) [POST]
+  Parameters: {"line_item"=>{"order_id"=>6, "total_price"=>40.0, "product_id"=>1, "quantity"=>2}}
+  [4;35;1mLineItem Create (0.4ms)[0m   [0mINSERT INTO "line_items" ("order_id", "updated_at", "total_price", "product_id", "quantity", "created_at") VALUES(6, '2009-02-14 05:10:13', 40.0, 1, 2, '2009-02-14 05:10:13')[0m
+Redirected to #<LineItem:0x24b66d8>
+Completed in 5ms (DB: 11) | 302 Found [http://test.host/line_items?line_item%5Border_id%5D=6&line_item%5Bproduct_id%5D=1&line_item%5Bquantity%5D=2&line_item%5Btotal_price%5D=40.0]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;36;1mLineItem Load (0.2ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#destroy (for 0.0.0.0 at 2009-02-13 21:10:13) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+  [4;36;1mLineItem Destroy (0.2ms)[0m   [0;1mDELETE FROM "line_items" WHERE "id" = 953125641[0m
+Redirected to http://test.host/line_items
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/line_items/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;36;1mLineItem Load (0.5ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#edit (for 0.0.0.0 at 2009-02-13 21:10:13) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+Rendering template within layouts/line_items
+Rendering line_items/edit
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/line_items/953125641/edit]
+
+
+Processing LineItemsController#index (for 0.0.0.0 at 2009-02-13 21:10:13) [GET]
+  [4;36;1mLineItem Load (0.4ms)[0m   [0;1mSELECT * FROM "line_items" [0m
+Rendering template within layouts/line_items
+Rendering line_items/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/line_items]
+
+
+Processing LineItemsController#new (for 0.0.0.0 at 2009-02-13 21:10:13) [GET]
+Rendering template within layouts/line_items
+Rendering line_items/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/line_items/new]
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#show (for 0.0.0.0 at 2009-02-13 21:10:13) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+Rendering template within layouts/line_items
+Rendering line_items/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/line_items/953125641]
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#update (for 0.0.0.0 at 2009-02-13 21:10:13) [PUT]
+  Parameters: {"id"=>"953125641", "line_item"=>{"quantity"=>2}}
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+  [4;35;1mLineItem Update (0.5ms)[0m   [0mUPDATE "line_items" SET "updated_at" = '2009-02-14 05:10:13', "quantity" = 2 WHERE "id" = 953125641[0m
+Redirected to #<LineItem:0x243d0bc>
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/line_items/953125641?line_item%5Bquantity%5D=2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "orders" [0m
+
+
+Processing OrdersController#create (for 0.0.0.0 at 2009-02-13 21:10:13) [POST]
+  Parameters: {"order"=>{"name"=>"James Howlett", "pay_type"=>"check", "address"=>"X-Mansion", "email"=>"wolverine@x-men.com"}}
+  [4;35;1mOrder Create (0.4ms)[0m   [0mINSERT INTO "orders" ("name", "updated_at", "pay_type", "address", "email", "created_at") VALUES('James Howlett', '2009-02-14 05:10:13', 'check', 'X-Mansion', 'wolverine@x-men.com', '2009-02-14 05:10:13')[0m
+Redirected to #<Order:0x242ac64>
+Completed in 6ms (DB: 1) | 302 Found [http://test.host/orders?order%5Baddress%5D=X-Mansion&order%5Bemail%5D=wolverine%40x-men.com&order%5Bname%5D=James+Howlett&order%5Bpay_type%5D=check]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#destroy (for 0.0.0.0 at 2009-02-13 21:10:13) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+  [4;36;1mOrder Destroy (0.2ms)[0m   [0;1mDELETE FROM "orders" WHERE "id" = 953125641[0m
+Redirected to http://test.host/orders
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/orders/953125641]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "orders" [0m
+
+
+Processing OrdersController#create (for 0.0.0.0 at 2009-02-13 21:10:13) [POST]
+  Parameters: {"order"=>{"name"=>"", "pay_type"=>"check", "address"=>"X-Mansion", "email"=>"wolverine@x-men.com"}}
+Rendering template within layouts/orders
+Rendering orders/new
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://test.host/orders?order%5Baddress%5D=X-Mansion&order%5Bemail%5D=wolverine%40x-men.com&order%5Bname%5D=&order%5Bpay_type%5D=check]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#edit (for 0.0.0.0 at 2009-02-13 21:10:13) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+Rendering template within layouts/orders
+Rendering orders/edit
+Completed in 3ms (View: 3, DB: 1) | 200 OK [http://test.host/orders/953125641/edit]
+
+
+Processing OrdersController#index (for 0.0.0.0 at 2009-02-13 21:10:13) [GET]
+  [4;36;1mOrder Load (0.4ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/orders
+Rendering orders/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/orders]
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2009-02-13 21:10:13) [GET]
+Rendering template within layouts/orders
+Rendering orders/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/orders/new]
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#show (for 0.0.0.0 at 2009-02-13 21:10:13) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+Rendering template within layouts/orders
+Rendering orders/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/orders/953125641]
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#update (for 0.0.0.0 at 2009-02-13 21:10:13) [PUT]
+  Parameters: {"order"=>{"pay_type"=>"cc"}, "id"=>"953125641"}
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+  [4;35;1mOrder Update (0.3ms)[0m   [0mUPDATE "orders" SET "pay_type" = 'cc', "updated_at" = '2009-02-14 05:10:13' WHERE "id" = 953125641[0m
+Redirected to #<Order:0x235b84c>
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/orders/953125641?order%5Bpay_type%5D=cc]
+  [4;36;1mProduct Load (0.6ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Update (0.3ms)[0m   [0;1mUPDATE "products" SET "price" = 1000.0, "updated_at" = '2009-02-14 05:10:13' WHERE "id" = 953125641[0m
+  [4;35;1mProduct Exists (0.2ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" IS NULL) LIMIT 1[0m
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" IS NULL) LIMIT 1[0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" IS NULL) LIMIT 1[0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Update (0.3ms)[0m   [0;1mUPDATE "products" SET "price" = 1.0, "updated_at" = '2009-02-14 05:10:13' WHERE "id" = 953125641[0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation') LIMIT 1[0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "products" [0m
+
+
+Processing ProductsController#create (for 0.0.0.0 at 2009-02-13 21:10:13) [POST]
+  Parameters: {"product"=>{"image_url"=>"http://example.com/foo.gif", "price"=>"100", "title"=>"awesome product", "description"=>"awesome product description"}}
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'awesome product') LIMIT 1[0m
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("image_url", "updated_at", "title", "price", "description", "created_at") VALUES('http://example.com/foo.gif', '2009-02-14 05:10:13', 'awesome product', 100.0, 'awesome product description', '2009-02-14 05:10:13')[0m
+Redirected to #<Product:0x22921f4>
+Completed in 5ms (DB: 5) | 302 Found [http://test.host/products?product%5Bdescription%5D=awesome+product+description&product%5Bimage_url%5D=http%3A%2F%2Fexample.com%2Ffoo.gif&product%5Bprice%5D=100&product%5Btitle%5D=awesome+product]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "products" [0m
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#destroy (for 0.0.0.0 at 2009-02-13 21:10:13) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Destroy (0.4ms)[0m   [0mDELETE FROM "products" WHERE "id" = 953125641[0m
+Redirected to http://test.host/products
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/products/953125641]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "products" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+
+
+Processing ProductsController#create (for 0.0.0.0 at 2009-02-13 21:10:13) [POST]
+  Parameters: {"product"=>{"image_url"=>"http://example.com/foo.gif", "price"=>"100", "title"=>"", "description"=>"awesome product description"}}
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = '') LIMIT 1[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 6ms (View: 3, DB: 1) | 200 OK [http://test.host/products?product%5Bdescription%5D=awesome+product+description&product%5Bimage_url%5D=http%3A%2F%2Fexample.com%2Ffoo.gif&product%5Bprice%5D=100&product%5Btitle%5D=]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#edit (for 0.0.0.0 at 2009-02-13 21:10:13) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 3ms (View: 3, DB: 1) | 200 OK [http://test.host/products/953125641/edit]
+
+
+Processing ProductsController#index (for 0.0.0.0 at 2009-02-13 21:10:13) [GET]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/products]
+
+
+Processing ProductsController#new (for 0.0.0.0 at 2009-02-13 21:10:13) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/products/new]
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#show (for 0.0.0.0 at 2009-02-13 21:10:13) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/products/953125641]
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#update (for 0.0.0.0 at 2009-02-13 21:10:13) [PUT]
+  Parameters: {"product"=>{"title"=>"mega awesome title"}, "id"=>"953125641"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'mega awesome title' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;35;1mProduct Update (0.3ms)[0m   [0mUPDATE "products" SET "title" = 'mega awesome title', "updated_at" = '2009-02-14 05:10:13' WHERE "id" = 953125641[0m
+Redirected to #<Product:0x21fed78>
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/products/953125641?product%5Btitle%5D=mega+awesome+title]
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing StoreController#add_to_cart (for 0.0.0.0 at 2009-02-13 21:10:13) [POST]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Redirected to actionindex
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/store/add_to_cart/953125641]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT max("products".id) AS max_id FROM "products" [0m
+
+
+Processing StoreController#add_to_cart (for 0.0.0.0 at 2009-02-13 21:10:13) [POST]
+  Parameters: {"id"=>"996332878"}
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 996332878) [0m
+Attempt to access invalid product 996332878
+Redirected to actionindex
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/store/add_to_cart/996332878]
+
+
+Processing StoreController#checkout (for 0.0.0.0 at 2009-02-13 21:10:13) [POST]
+Redirected to actionindex
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/store/checkout]
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing StoreController#add_to_cart (for 0.0.0.0 at 2009-02-13 21:10:13) [POST]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Redirected to actionindex
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/store/add_to_cart/953125641]
+
+
+Processing StoreController#checkout (for 0.0.0.0 at 2009-02-13 21:10:13) [POST]
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.6ms)
+Rendered store/_cart (2.2ms)
+Completed in 7ms (View: 7, DB: 0) | 200 OK [http://test.host/store/add_to_cart/953125641]
+
+
+Processing StoreController#empty_cart (for 0.0.0.0 at 2009-02-13 21:10:13) [POST]
+Redirected to actionindex
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/store/empty_cart]
+
+
+Processing StoreController#index (for 0.0.0.0 at 2009-02-13 21:10:13) [GET]
+  [4;35;1mProduct Load (0.6ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (1.0ms)
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://test.host/]
+
+
+Processing StoreController#index (for 0.0.0.0 at 2009-02-13 21:10:13) [GET]
+  [4;36;1mProduct Load (0.6ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (1.1ms)
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://test.host/]
+  [4;35;1mProduct Load (0.5ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-02-13 21:10:13) [POST]
+  Parameters: {"user"=>{"name"=>"Bob Smith", "password_confirmation"=>"test", "password"=>"test"}}
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = 'Bob Smith') LIMIT 1[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "updated_at", "hashed_password", "created_at") VALUES('Bob Smith', '175075700.582191156713647', '2009-02-14 05:10:13', 'ff9070ae31660e7db271f22a8f0aa3cccc4e26ad', '2009-02-14 05:10:13')[0m
+Redirected to actionindex
+Completed in 6ms (DB: 1) | 302 Found [http://test.host/users?user%5Bname%5D=Bob+Smith&user%5Bpassword%5D=test&user%5Bpassword_confirmation%5D=test]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#destroy (for 0.0.0.0 at 2009-02-13 21:10:13) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+  [4;35;1mUser Destroy (0.3ms)[0m   [0mDELETE FROM "users" WHERE "id" = 953125641[0m
+Redirected to http://test.host/users
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/users/953125641]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Load (71.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#edit (for 0.0.0.0 at 2009-02-13 21:10:13) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+Rendering template within layouts/users
+Rendering users/edit
+Completed in 4ms (View: 3, DB: 72) | 200 OK [http://test.host/users/953125641/edit]
+
+
+Processing UsersController#index (for 0.0.0.0 at 2009-02-13 21:10:13) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://test.host/users]
+
+
+Processing UsersController#new (for 0.0.0.0 at 2009-02-13 21:10:13) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/users/new]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#show (for 0.0.0.0 at 2009-02-13 21:10:13) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/users/953125641]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#update (for 0.0.0.0 at 2009-02-13 21:10:13) [PUT]
+  Parameters: {"user"=>{"name"=>"Logan"}, "id"=>"953125641"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."name" = 'Logan' AND "users".id <> 953125641) LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "name" = 'Logan', "updated_at" = '2009-02-14 05:10:13' WHERE "id" = 953125641[0m
+Redirected to actionindex
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/users/953125641?user%5Bname%5D=Logan]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-02-13 21:10:36) [POST]
+  Parameters: {"user"=>{"name"=>"James Howlett", "password_confirmation"=>"number1xmen", "password"=>"number1xmen"}}
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = 'James Howlett') LIMIT 1[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 18ms (View: 4, DB: 3) | 200 OK [http://test.host/users?user%5Bname%5D=James+Howlett&user%5Bpassword%5D=number1xmen&user%5Bpassword_confirmation%5D=number1xmen]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#destroy (for 0.0.0.0 at 2009-02-13 21:10:36) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+  [4;36;1mUser Destroy (0.5ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 953125641[0m
+Redirected to http://test.host/users
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/users/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#edit (for 0.0.0.0 at 2009-02-13 21:10:36) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+Rendering template within layouts/users
+Rendering users/edit
+Completed in 5ms (View: 4, DB: 1) | 200 OK [http://test.host/users/953125641/edit]
+
+
+Processing UsersController#index (for 0.0.0.0 at 2009-02-13 21:10:36) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 5ms (View: 3, DB: 1) | 200 OK [http://test.host/users]
+
+
+Processing UsersController#new (for 0.0.0.0 at 2009-02-13 21:10:36) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/users/new]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#show (for 0.0.0.0 at 2009-02-13 21:10:36) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/users/953125641]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#update (for 0.0.0.0 at 2009-02-13 21:10:36) [PUT]
+  Parameters: {"user"=>{"name"=>"Logan"}, "id"=>"953125641"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = 'Logan' AND "users".id <> 953125641) LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "name" = 'Logan', "updated_at" = '2009-02-14 05:10:36' WHERE "id" = 953125641[0m
+Redirected to actionindex
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/users/953125641?user%5Bname%5D=Logan]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-02-13 21:10:56) [POST]
+  Parameters: {"user"=>{"name"=>"James Howlett", "password_confirmation"=>"number1xmen", "password"=>"number1xmen"}}
+  [4;35;1mUser Exists (1.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = 'James Howlett') LIMIT 1[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 18ms (View: 4, DB: 3) | 200 OK [http://test.host/users?user%5Bname%5D=James+Howlett&user%5Bpassword%5D=number1xmen&user%5Bpassword_confirmation%5D=number1xmen]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-02-13 21:11:07) [POST]
+  Parameters: {"user"=>{"name"=>"James Howlett", "password_confirmation"=>"number1xman", "password"=>"number1xman"}}
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = 'James Howlett') LIMIT 1[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 19ms (View: 3, DB: 3) | 200 OK [http://test.host/users?user%5Bname%5D=James+Howlett&user%5Bpassword%5D=number1xman&user%5Bpassword_confirmation%5D=number1xman]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-02-13 21:13:28) [POST]
+  Parameters: {"user"=>{"name"=>"James Howlett", "password_confirmation"=>"number1xman", "password"=>"number1xman"}}
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = 'James Howlett') LIMIT 1[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 14ms (View: 4, DB: 58) | 200 OK [http://test.host/users?user%5Bname%5D=James+Howlett&user%5Bpassword%5D=number1xman&user%5Bpassword_confirmation%5D=number1xman]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mProduct Load (0.6ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.5ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Load (0.5ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.6ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 996332877) [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 996332877) [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 996332877) [0m
+  [4;36;1mProduct Load (0.5ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Update (0.4ms)[0m   [0;1mUPDATE "products" SET "price" = 1000.0, "updated_at" = '2009-02-14 05:13:38' WHERE "id" = 953125641[0m
+  [4;35;1mProduct Exists (0.2ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" IS NULL) LIMIT 1[0m
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" IS NULL) LIMIT 1[0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" IS NULL) LIMIT 1[0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Update (0.3ms)[0m   [0;1mUPDATE "products" SET "price" = 1.0, "updated_at" = '2009-02-14 05:13:38' WHERE "id" = 953125641[0m
+  [4;35;1mProduct Load (1.2ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mProduct Exists (0.2ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation') LIMIT 1[0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Load (0.5ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mLineItem Load (0.4ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "line_items" [0m
+
+
+Processing LineItemsController#create (for 0.0.0.0 at 2009-02-13 21:13:40) [POST]
+  Parameters: {"line_item"=>{"order_id"=>6, "total_price"=>40.0, "product_id"=>1, "quantity"=>2}}
+  [4;35;1mLineItem Create (0.4ms)[0m   [0mINSERT INTO "line_items" ("order_id", "updated_at", "total_price", "product_id", "quantity", "created_at") VALUES(6, '2009-02-14 05:13:40', 40.0, 1, 2, '2009-02-14 05:13:40')[0m
+Redirected to #<LineItem:0x24ad010>
+Completed in 5ms (DB: 5) | 302 Found [http://test.host/line_items?line_item%5Border_id%5D=6&line_item%5Bproduct_id%5D=1&line_item%5Bquantity%5D=2&line_item%5Btotal_price%5D=40.0]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;36;1mLineItem Load (0.2ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#destroy (for 0.0.0.0 at 2009-02-13 21:13:40) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+  [4;36;1mLineItem Destroy (0.2ms)[0m   [0;1mDELETE FROM "line_items" WHERE "id" = 953125641[0m
+Redirected to http://test.host/line_items
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/line_items/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#edit (for 0.0.0.0 at 2009-02-13 21:13:40) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+Rendering template within layouts/line_items
+Rendering line_items/edit
+Completed in 4ms (View: 4, DB: 1) | 200 OK [http://test.host/line_items/953125641/edit]
+
+
+Processing LineItemsController#index (for 0.0.0.0 at 2009-02-13 21:13:40) [GET]
+  [4;36;1mLineItem Load (0.4ms)[0m   [0;1mSELECT * FROM "line_items" [0m
+Rendering template within layouts/line_items
+Rendering line_items/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/line_items]
+
+
+Processing LineItemsController#new (for 0.0.0.0 at 2009-02-13 21:13:40) [GET]
+Rendering template within layouts/line_items
+Rendering line_items/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/line_items/new]
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#show (for 0.0.0.0 at 2009-02-13 21:13:40) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+Rendering template within layouts/line_items
+Rendering line_items/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/line_items/953125641]
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#update (for 0.0.0.0 at 2009-02-13 21:13:40) [PUT]
+  Parameters: {"id"=>"953125641", "line_item"=>{"quantity"=>2}}
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+  [4;35;1mLineItem Update (0.6ms)[0m   [0mUPDATE "line_items" SET "updated_at" = '2009-02-14 05:13:40', "quantity" = 2 WHERE "id" = 953125641[0m
+Redirected to #<LineItem:0x2421074>
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/line_items/953125641?line_item%5Bquantity%5D=2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "orders" [0m
+
+
+Processing OrdersController#create (for 0.0.0.0 at 2009-02-13 21:13:40) [POST]
+  Parameters: {"order"=>{"name"=>"James Howlett", "pay_type"=>"check", "address"=>"X-Mansion", "email"=>"wolverine@x-men.com"}}
+  [4;35;1mOrder Create (0.4ms)[0m   [0mINSERT INTO "orders" ("name", "updated_at", "pay_type", "address", "email", "created_at") VALUES('James Howlett', '2009-02-14 05:13:40', 'check', 'X-Mansion', 'wolverine@x-men.com', '2009-02-14 05:13:40')[0m
+Redirected to #<Order:0x2404668>
+Completed in 6ms (DB: 1) | 302 Found [http://test.host/orders?order%5Baddress%5D=X-Mansion&order%5Bemail%5D=wolverine%40x-men.com&order%5Bname%5D=James+Howlett&order%5Bpay_type%5D=check]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#destroy (for 0.0.0.0 at 2009-02-13 21:13:40) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+  [4;36;1mOrder Destroy (0.2ms)[0m   [0;1mDELETE FROM "orders" WHERE "id" = 953125641[0m
+Redirected to http://test.host/orders
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/orders/953125641]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "orders" [0m
+
+
+Processing OrdersController#create (for 0.0.0.0 at 2009-02-13 21:13:40) [POST]
+  Parameters: {"order"=>{"name"=>"", "pay_type"=>"check", "address"=>"X-Mansion", "email"=>"wolverine@x-men.com"}}
+Rendering template within layouts/orders
+Rendering orders/new
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://test.host/orders?order%5Baddress%5D=X-Mansion&order%5Bemail%5D=wolverine%40x-men.com&order%5Bname%5D=&order%5Bpay_type%5D=check]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;36;1mOrder Load (0.6ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#edit (for 0.0.0.0 at 2009-02-13 21:13:40) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mOrder Load (0.4ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+Rendering template within layouts/orders
+Rendering orders/edit
+Completed in 5ms (View: 3, DB: 1) | 200 OK [http://test.host/orders/953125641/edit]
+
+
+Processing OrdersController#index (for 0.0.0.0 at 2009-02-13 21:13:40) [GET]
+  [4;36;1mOrder Load (0.4ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/orders
+Rendering orders/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/orders]
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2009-02-13 21:13:40) [GET]
+Rendering template within layouts/orders
+Rendering orders/new
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/orders/new]
+  [4;35;1mOrder Load (0.5ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#show (for 0.0.0.0 at 2009-02-13 21:13:40) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+Rendering template within layouts/orders
+Rendering orders/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/orders/953125641]
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#update (for 0.0.0.0 at 2009-02-13 21:13:40) [PUT]
+  Parameters: {"order"=>{"pay_type"=>"cc"}, "id"=>"953125641"}
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+  [4;35;1mOrder Update (0.3ms)[0m   [0mUPDATE "orders" SET "pay_type" = 'cc', "updated_at" = '2009-02-14 05:13:40' WHERE "id" = 953125641[0m
+Redirected to #<Order:0x237515c>
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/orders/953125641?order%5Bpay_type%5D=cc]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "products" [0m
+
+
+Processing ProductsController#create (for 0.0.0.0 at 2009-02-13 21:13:40) [POST]
+  Parameters: {"product"=>{"image_url"=>"http://example.com/foo.gif", "price"=>"100", "title"=>"awesome product", "description"=>"awesome product description"}}
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'awesome product') LIMIT 1[0m
+  [4;36;1mProduct Create (0.3ms)[0m   [0;1mINSERT INTO "products" ("image_url", "updated_at", "title", "price", "description", "created_at") VALUES('http://example.com/foo.gif', '2009-02-14 05:13:40', 'awesome product', 100.0, 'awesome product description', '2009-02-14 05:13:40')[0m
+Redirected to #<Product:0x23686dc>
+Completed in 5ms (DB: 1) | 302 Found [http://test.host/products?product%5Bdescription%5D=awesome+product+description&product%5Bimage_url%5D=http%3A%2F%2Fexample.com%2Ffoo.gif&product%5Bprice%5D=100&product%5Btitle%5D=awesome+product]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "products" [0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#destroy (for 0.0.0.0 at 2009-02-13 21:13:40) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Destroy (0.3ms)[0m   [0mDELETE FROM "products" WHERE "id" = 953125641[0m
+Redirected to http://test.host/products
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/products/953125641]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "products" [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+
+
+Processing ProductsController#create (for 0.0.0.0 at 2009-02-13 21:13:40) [POST]
+  Parameters: {"product"=>{"image_url"=>"http://example.com/foo.gif", "price"=>"100", "title"=>"", "description"=>"awesome product description"}}
+  [4;36;1mProduct Exists (0.2ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = '') LIMIT 1[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://test.host/products?product%5Bdescription%5D=awesome+product+description&product%5Bimage_url%5D=http%3A%2F%2Fexample.com%2Ffoo.gif&product%5Bprice%5D=100&product%5Btitle%5D=]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+  [4;36;1mProduct Load (0.5ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#edit (for 0.0.0.0 at 2009-02-13 21:13:40) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 5ms (View: 4, DB: 1) | 200 OK [http://test.host/products/953125641/edit]
+
+
+Processing ProductsController#index (for 0.0.0.0 at 2009-02-13 21:13:40) [GET]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/products]
+
+
+Processing ProductsController#new (for 0.0.0.0 at 2009-02-13 21:13:40) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/products/new]
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#show (for 0.0.0.0 at 2009-02-13 21:13:40) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/products/953125641]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#update (for 0.0.0.0 at 2009-02-13 21:13:40) [PUT]
+  Parameters: {"product"=>{"title"=>"mega awesome title"}, "id"=>"953125641"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'mega awesome title' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;35;1mProduct Update (0.3ms)[0m   [0mUPDATE "products" SET "title" = 'mega awesome title', "updated_at" = '2009-02-14 05:13:40' WHERE "id" = 953125641[0m
+Redirected to #<Product:0x22d5044>
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/products/953125641?product%5Btitle%5D=mega+awesome+title]
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing StoreController#add_to_cart (for 0.0.0.0 at 2009-02-13 21:13:40) [POST]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Redirected to actionindex
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/store/add_to_cart/953125641]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT max("products".id) AS max_id FROM "products" [0m
+
+
+Processing StoreController#add_to_cart (for 0.0.0.0 at 2009-02-13 21:13:40) [POST]
+  Parameters: {"id"=>"996332878"}
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 996332878) [0m
+Attempt to access invalid product 996332878
+Redirected to actionindex
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/store/add_to_cart/996332878]
+
+
+Processing StoreController#checkout (for 0.0.0.0 at 2009-02-13 21:13:40) [POST]
+Redirected to actionindex
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/store/checkout]
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing StoreController#add_to_cart (for 0.0.0.0 at 2009-02-13 21:13:40) [POST]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Redirected to actionindex
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/store/add_to_cart/953125641]
+
+
+Processing StoreController#checkout (for 0.0.0.0 at 2009-02-13 21:13:40) [POST]
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.6ms)
+Rendered store/_cart (2.3ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://test.host/store/add_to_cart/953125641]
+
+
+Processing StoreController#empty_cart (for 0.0.0.0 at 2009-02-13 21:13:40) [POST]
+Redirected to actionindex
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/store/empty_cart]
+
+
+Processing StoreController#index (for 0.0.0.0 at 2009-02-13 21:13:40) [GET]
+  [4;35;1mProduct Load (0.6ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (1.2ms)
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://test.host/]
+
+
+Processing StoreController#index (for 0.0.0.0 at 2009-02-13 21:13:40) [GET]
+  [4;36;1mProduct Load (0.6ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (1.1ms)
+Completed in 62ms (View: 61, DB: 1) | 200 OK [http://test.host/]
+  [4;35;1mProduct Load (0.6ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-02-13 21:13:40) [POST]
+  Parameters: {"user"=>{"name"=>"James Howlett", "password_confirmation"=>"number1xman", "password"=>"number1xman"}}
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = 'James Howlett') LIMIT 1[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://test.host/users?user%5Bname%5D=James+Howlett&user%5Bpassword%5D=number1xman&user%5Bpassword_confirmation%5D=number1xman]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#destroy (for 0.0.0.0 at 2009-02-13 21:13:40) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+  [4;36;1mUser Destroy (0.3ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 953125641[0m
+Redirected to http://test.host/users
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/users/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#edit (for 0.0.0.0 at 2009-02-13 21:13:40) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+Rendering template within layouts/users
+Rendering users/edit
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://test.host/users/953125641/edit]
+
+
+Processing UsersController#index (for 0.0.0.0 at 2009-02-13 21:13:40) [GET]
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 5ms (View: 3, DB: 1) | 200 OK [http://test.host/users]
+
+
+Processing UsersController#new (for 0.0.0.0 at 2009-02-13 21:13:40) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/users/new]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#show (for 0.0.0.0 at 2009-02-13 21:13:40) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/users/953125641]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#update (for 0.0.0.0 at 2009-02-13 21:13:40) [PUT]
+  Parameters: {"user"=>{"name"=>"Logan"}, "id"=>"953125641"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = 'Logan' AND "users".id <> 953125641) LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "name" = 'Logan', "updated_at" = '2009-02-14 05:13:40' WHERE "id" = 953125641[0m
+Redirected to actionindex
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/users/953125641?user%5Bname%5D=Logan]
+  [4;36;1mProduct Load (0.5ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.5ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 996332877) [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 996332877) [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 996332877) [0m
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "line_items" [0m
+
+
+Processing LineItemsController#create (for 0.0.0.0 at 2009-02-13 21:14:42) [POST]
+  Parameters: {"line_item"=>{"order_id"=>6, "total_price"=>40.0, "product_id"=>1, "quantity"=>2}}
+  [4;35;1mLineItem Create (0.5ms)[0m   [0mINSERT INTO "line_items" ("order_id", "updated_at", "total_price", "product_id", "quantity", "created_at") VALUES(6, '2009-02-14 05:14:42', 40.0, 1, 2, '2009-02-14 05:14:42')[0m
+Redirected to #<LineItem:0x24bbae8>
+Completed in 5ms (DB: 8) | 302 Found [http://test.host/line_items?line_item%5Border_id%5D=6&line_item%5Bproduct_id%5D=1&line_item%5Bquantity%5D=2&line_item%5Btotal_price%5D=40.0]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;36;1mLineItem Load (0.2ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#destroy (for 0.0.0.0 at 2009-02-13 21:14:42) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+  [4;36;1mLineItem Destroy (0.2ms)[0m   [0;1mDELETE FROM "line_items" WHERE "id" = 953125641[0m
+Redirected to http://test.host/line_items
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/line_items/953125641]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "line_items" [0m
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#edit (for 0.0.0.0 at 2009-02-13 21:14:42) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+Rendering template within layouts/line_items
+Rendering line_items/edit
+Completed in 4ms (View: 4, DB: 1) | 200 OK [http://test.host/line_items/953125641/edit]
+
+
+Processing LineItemsController#index (for 0.0.0.0 at 2009-02-13 21:14:42) [GET]
+  [4;36;1mLineItem Load (0.4ms)[0m   [0;1mSELECT * FROM "line_items" [0m
+Rendering template within layouts/line_items
+Rendering line_items/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/line_items]
+
+
+Processing LineItemsController#new (for 0.0.0.0 at 2009-02-13 21:14:42) [GET]
+Rendering template within layouts/line_items
+Rendering line_items/new
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/line_items/new]
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#show (for 0.0.0.0 at 2009-02-13 21:14:42) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+Rendering template within layouts/line_items
+Rendering line_items/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/line_items/953125641]
+  [4;35;1mLineItem Load (0.3ms)[0m   [0mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+
+
+Processing LineItemsController#update (for 0.0.0.0 at 2009-02-13 21:14:42) [PUT]
+  Parameters: {"id"=>"953125641", "line_item"=>{"quantity"=>2}}
+  [4;36;1mLineItem Load (0.3ms)[0m   [0;1mSELECT * FROM "line_items" WHERE ("line_items"."id" = 953125641) [0m
+  [4;35;1mLineItem Update (0.5ms)[0m   [0mUPDATE "line_items" SET "updated_at" = '2009-02-14 05:14:42', "quantity" = 2 WHERE "id" = 953125641[0m
+Redirected to #<LineItem:0x2442544>
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/line_items/953125641?line_item%5Bquantity%5D=2]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "orders" [0m
+
+
+Processing OrdersController#create (for 0.0.0.0 at 2009-02-13 21:14:42) [POST]
+  Parameters: {"order"=>{"name"=>"James Howlett", "pay_type"=>"check", "address"=>"X-Mansion", "email"=>"wolverine@x-men.com"}}
+  [4;35;1mOrder Create (0.6ms)[0m   [0mINSERT INTO "orders" ("name", "updated_at", "pay_type", "address", "email", "created_at") VALUES('James Howlett', '2009-02-14 05:14:42', 'check', 'X-Mansion', 'wolverine@x-men.com', '2009-02-14 05:14:42')[0m
+Redirected to #<Order:0x24300d8>
+Completed in 8ms (DB: 1) | 302 Found [http://test.host/orders?order%5Baddress%5D=X-Mansion&order%5Bemail%5D=wolverine%40x-men.com&order%5Bname%5D=James+Howlett&order%5Bpay_type%5D=check]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#destroy (for 0.0.0.0 at 2009-02-13 21:14:42) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+  [4;36;1mOrder Destroy (0.3ms)[0m   [0;1mDELETE FROM "orders" WHERE "id" = 953125641[0m
+Redirected to http://test.host/orders
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/orders/953125641]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "orders" [0m
+
+
+Processing OrdersController#create (for 0.0.0.0 at 2009-02-13 21:14:42) [POST]
+  Parameters: {"order"=>{"name"=>"", "pay_type"=>"check", "address"=>"X-Mansion", "email"=>"wolverine@x-men.com"}}
+Rendering template within layouts/orders
+Rendering orders/new
+Completed in 6ms (View: 3, DB: 1) | 200 OK [http://test.host/orders?order%5Baddress%5D=X-Mansion&order%5Bemail%5D=wolverine%40x-men.com&order%5Bname%5D=&order%5Bpay_type%5D=check]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "orders" [0m
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#edit (for 0.0.0.0 at 2009-02-13 21:14:42) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+Rendering template within layouts/orders
+Rendering orders/edit
+Completed in 3ms (View: 3, DB: 1) | 200 OK [http://test.host/orders/953125641/edit]
+
+
+Processing OrdersController#index (for 0.0.0.0 at 2009-02-13 21:14:42) [GET]
+  [4;36;1mOrder Load (0.4ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/orders
+Rendering orders/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/orders]
+
+
+Processing OrdersController#new (for 0.0.0.0 at 2009-02-13 21:14:42) [GET]
+Rendering template within layouts/orders
+Rendering orders/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/orders/new]
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#show (for 0.0.0.0 at 2009-02-13 21:14:42) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+Rendering template within layouts/orders
+Rendering orders/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/orders/953125641]
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+
+
+Processing OrdersController#update (for 0.0.0.0 at 2009-02-13 21:14:42) [PUT]
+  Parameters: {"order"=>{"pay_type"=>"cc"}, "id"=>"953125641"}
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 953125641) [0m
+  [4;35;1mOrder Update (0.3ms)[0m   [0mUPDATE "orders" SET "pay_type" = 'cc', "updated_at" = '2009-02-14 05:14:42' WHERE "id" = 953125641[0m
+Redirected to #<Order:0x2360ce8>
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/orders/953125641?order%5Bpay_type%5D=cc]
+  [4;36;1mProduct Load (0.9ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Update (0.3ms)[0m   [0;1mUPDATE "products" SET "price" = 1000.0, "updated_at" = '2009-02-14 05:14:42' WHERE "id" = 953125641[0m
+  [4;35;1mProduct Exists (0.2ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" IS NULL) LIMIT 1[0m
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" IS NULL) LIMIT 1[0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" IS NULL) LIMIT 1[0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mProduct Update (0.3ms)[0m   [0;1mUPDATE "products" SET "price" = 1.0, "updated_at" = '2009-02-14 05:14:42' WHERE "id" = 953125641[0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation') LIMIT 1[0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;35;1mProduct Exists (0.3ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'Pragmatic Project Automation' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "products" [0m
+
+
+Processing ProductsController#create (for 0.0.0.0 at 2009-02-13 21:14:42) [POST]
+  Parameters: {"product"=>{"image_url"=>"http://example.com/foo.gif", "title"=>"awesome product", "price"=>"100", "description"=>"awesome product description"}}
+  [4;35;1mProduct Exists (0.1ms)[0m   [0mSELECT "products".id FROM "products" WHERE ("products"."title" = 'awesome product') LIMIT 1[0m
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("image_url", "updated_at", "title", "price", "description", "created_at") VALUES('http://example.com/foo.gif', '2009-02-14 05:14:42', 'awesome product', 100.0, 'awesome product description', '2009-02-14 05:14:42')[0m
+Redirected to #<Product:0x2293ec8>
+Completed in 5ms (DB: 5) | 302 Found [http://test.host/products?product%5Bdescription%5D=awesome+product+description&product%5Bimage_url%5D=http%3A%2F%2Fexample.com%2Ffoo.gif&product%5Bprice%5D=100&product%5Btitle%5D=awesome+product]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "products" [0m
+  [4;35;1mProduct Load (0.2ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#destroy (for 0.0.0.0 at 2009-02-13 21:14:42) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Destroy (0.2ms)[0m   [0mDELETE FROM "products" WHERE "id" = 953125641[0m
+Redirected to http://test.host/products
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/products/953125641]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "products" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+
+
+Processing ProductsController#create (for 0.0.0.0 at 2009-02-13 21:14:42) [POST]
+  Parameters: {"product"=>{"image_url"=>"http://example.com/foo.gif", "title"=>"", "price"=>"100", "description"=>"awesome product description"}}
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = '') LIMIT 1[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://test.host/products?product%5Bdescription%5D=awesome+product+description&product%5Bimage_url%5D=http%3A%2F%2Fexample.com%2Ffoo.gif&product%5Bprice%5D=100&product%5Btitle%5D=]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#edit (for 0.0.0.0 at 2009-02-13 21:14:42) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/products/953125641/edit]
+
+
+Processing ProductsController#index (for 0.0.0.0 at 2009-02-13 21:14:42) [GET]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "products" [0m
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/products]
+
+
+Processing ProductsController#new (for 0.0.0.0 at 2009-02-13 21:14:42) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/products/new]
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#show (for 0.0.0.0 at 2009-02-13 21:14:42) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 3ms (View: 1, DB: 1) | 200 OK [http://test.host/products/953125641]
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing ProductsController#update (for 0.0.0.0 at 2009-02-13 21:14:42) [PUT]
+  Parameters: {"product"=>{"title"=>"mega awesome title"}, "id"=>"953125641"}
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mProduct Exists (0.1ms)[0m   [0;1mSELECT "products".id FROM "products" WHERE ("products"."title" = 'mega awesome title' AND "products".id <> 953125641) LIMIT 1[0m
+  [4;35;1mProduct Update (0.3ms)[0m   [0mUPDATE "products" SET "title" = 'mega awesome title', "updated_at" = '2009-02-14 05:14:42' WHERE "id" = 953125641[0m
+Redirected to #<Product:0x2200a4c>
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/products/953125641?product%5Btitle%5D=mega+awesome+title]
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing StoreController#add_to_cart (for 0.0.0.0 at 2009-02-13 21:14:42) [POST]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Redirected to actionindex
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/store/add_to_cart/953125641]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT max("products".id) AS max_id FROM "products" [0m
+
+
+Processing StoreController#add_to_cart (for 0.0.0.0 at 2009-02-13 21:14:42) [POST]
+  Parameters: {"id"=>"996332878"}
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 996332878) [0m
+Attempt to access invalid product 996332878
+Redirected to actionindex
+Completed in 1ms (DB: 0) | 302 Found [http://test.host/store/add_to_cart/996332878]
+
+
+Processing StoreController#checkout (for 0.0.0.0 at 2009-02-13 21:14:42) [POST]
+Redirected to actionindex
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/store/checkout]
+  [4;35;1mProduct Load (0.3ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing StoreController#add_to_cart (for 0.0.0.0 at 2009-02-13 21:14:42) [POST]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mProduct Load (0.3ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+Redirected to actionindex
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/store/add_to_cart/953125641]
+
+
+Processing StoreController#checkout (for 0.0.0.0 at 2009-02-13 21:14:42) [POST]
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.6ms)
+Rendered store/_cart (2.2ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://test.host/store/add_to_cart/953125641]
+
+
+Processing StoreController#empty_cart (for 0.0.0.0 at 2009-02-13 21:14:42) [POST]
+Redirected to actionindex
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/store/empty_cart]
+
+
+Processing StoreController#index (for 0.0.0.0 at 2009-02-13 21:14:42) [GET]
+  [4;35;1mProduct Load (0.6ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (1.0ms)
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://test.host/]
+
+
+Processing StoreController#index (for 0.0.0.0 at 2009-02-13 21:14:42) [GET]
+  [4;36;1mProduct Load (0.7ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (1.1ms)
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://test.host/]
+  [4;35;1mProduct Load (0.6ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-02-13 21:14:43) [POST]
+  Parameters: {"user"=>{"name"=>"James Howlettss", "password_confirmation"=>"number1xman", "password"=>"number1xman"}}
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = 'James Howlettss') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "updated_at", "hashed_password", "created_at") VALUES('James Howlettss', '175112600.816446565279079', '2009-02-14 05:14:43', 'e81c754b515d750d169a3da380a0b51ddbd945fc', '2009-02-14 05:14:43')[0m
+Redirected to actionindex
+Completed in 6ms (DB: 1) | 302 Found [http://test.host/users?user%5Bname%5D=James+Howlettss&user%5Bpassword%5D=number1xman&user%5Bpassword_confirmation%5D=number1xman]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#destroy (for 0.0.0.0 at 2009-02-13 21:14:43) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+  [4;35;1mUser Destroy (0.2ms)[0m   [0mDELETE FROM "users" WHERE "id" = 953125641[0m
+Redirected to http://test.host/users
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/users/953125641]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#edit (for 0.0.0.0 at 2009-02-13 21:14:43) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+Rendering template within layouts/users
+Rendering users/edit
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/users/953125641/edit]
+
+
+Processing UsersController#index (for 0.0.0.0 at 2009-02-13 21:14:43) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://test.host/users]
+
+
+Processing UsersController#new (for 0.0.0.0 at 2009-02-13 21:14:43) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 2ms (View: 2, DB: 0) | 200 OK [http://test.host/users/new]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#show (for 0.0.0.0 at 2009-02-13 21:14:43) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://test.host/users/953125641]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#update (for 0.0.0.0 at 2009-02-13 21:14:43) [PUT]
+  Parameters: {"user"=>{"name"=>"Logan"}, "id"=>"953125641"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."name" = 'Logan' AND "users".id <> 953125641) LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "name" = 'Logan', "updated_at" = '2009-02-14 05:14:43' WHERE "id" = 953125641[0m
+Redirected to actionindex
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/users/953125641?user%5Bname%5D=Logan]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2009-02-13 21:16:28) [POST]
+  Parameters: {"user"=>{"name"=>"Kurt Wagner", "password_confirmation"=>"darkestxman", "password"=>"darkestxman"}}
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = 'Kurt Wagner') LIMIT 1[0m
+  [4;36;1mUser Create (2.5ms)[0m   [0;1mINSERT INTO "users" ("name", "salt", "updated_at", "hashed_password", "created_at") VALUES('Kurt Wagner', '194157100.602183577719148', '2009-02-14 05:16:28', '42749fcbf0aa386848615cdcb8b86e2f1edce38e', '2009-02-14 05:16:28')[0m
+Redirected to actionindex
+Completed in 16ms (DB: 6) | 302 Found [http://test.host/users?user%5Bname%5D=Kurt+Wagner&user%5Bpassword%5D=darkestxman&user%5Bpassword_confirmation%5D=darkestxman]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#destroy (for 0.0.0.0 at 2009-02-13 21:16:28) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+  [4;35;1mUser Destroy (0.5ms)[0m   [0mDELETE FROM "users" WHERE "id" = 953125641[0m
+Redirected to http://test.host/users
+Completed in 2ms (DB: 2) | 302 Found [http://test.host/users/953125641]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Load (5.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#edit (for 0.0.0.0 at 2009-02-13 21:16:28) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+Rendering template within layouts/users
+Rendering users/edit
+Completed in 22ms (View: 21, DB: 6) | 200 OK [http://test.host/users/953125641/edit]
+
+
+Processing UsersController#index (for 0.0.0.0 at 2009-02-13 21:16:28) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" ORDER BY name[0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 3ms (View: 2, DB: 1) | 200 OK [http://test.host/users]
+
+
+Processing UsersController#new (for 0.0.0.0 at 2009-02-13 21:16:28) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://test.host/users/new]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#show (for 0.0.0.0 at 2009-02-13 21:16:28) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://test.host/users/953125641]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+
+
+Processing UsersController#update (for 0.0.0.0 at 2009-02-13 21:16:28) [PUT]
+  Parameters: {"user"=>{"name"=>"Logan"}, "id"=>"953125641"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 953125641) [0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."name" = 'Logan' AND "users".id <> 953125641) LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "name" = 'Logan', "updated_at" = '2009-02-14 05:16:28' WHERE "id" = 953125641[0m
+Redirected to actionindex
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/users/953125641?user%5Bname%5D=Logan]

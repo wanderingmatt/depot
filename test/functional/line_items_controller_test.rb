@@ -49,4 +49,31 @@ class LineItemsControllerTest < ActionController::TestCase
 
     assert_redirected_to line_items_path
   end
+  
+  def test_from_cart_item
+    product = products(:one)
+    cart_item = CartItem.new product
+    line_item = LineItem.from_cart_item(cart_item)
+    
+    assert_equal products(:one), line_item.product
+    assert_equal 1, line_item.quantity
+    assert_equal products(:one).price, line_item.total_price
+  end
+  
+  def test_from_cart_itemcart_with_many
+    product = products(:one)
+    cart_item = CartItem.new product
+    cart_item.increment_quantity
+    line_item = LineItem.from_cart_item(cart_item)
+    
+    assert_equal products(:one), line_item.product
+    assert_equal 2, line_item.quantity
+    assert_equal cart_item.price, line_item.total_price
+  end
+  
+  def test_line_item_can_has_order
+    line_item = line_items(:one)
+    line_item.order = orders(:one)
+    assert_equal(orders(:one), line_item.order)
+  end
 end
