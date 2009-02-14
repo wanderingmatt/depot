@@ -14,11 +14,11 @@ class CartItemTest < ActiveSupport::TestCase
  
   def test_title
     cart_item = CartItem.new(products(:one))
-    assert_equal 'Pragmatic Project Automation', cart_item.title
+    assert_equal products(:one).title, cart_item.title
   end
  
   def test_price
     cart_item = CartItem.new(products(:one))
-    assert_equal 29.00, cart_item.price.to_i
+    assert_equal products(:one).price, cart_item.price.to_i
   end
 end
