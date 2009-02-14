@@ -4,7 +4,7 @@ class UsersControllerTest < ActionController::TestCase
   def setup
     @request.session[:user_id] = users(:one).id
   end
-  
+
   test "should get index" do
     get :index
     assert_response :success
@@ -27,15 +27,45 @@ class UsersControllerTest < ActionController::TestCase
 
     assert_redirected_to :action => 'index'
   end
+  
+  test "should not create invalid user" do
+    assert_difference('User.count', 0) do    
+      post :create, :user => { :name => '' }
+    end
+    
+    assert_not_nil assigns(:user).errors.on :name
+  end
+  
+  test "should not create duplicate user" do
+    assert_difference('User.count', 0) do    
+      post :create, :user => { :name => users(:one).name }
+    end
+    
+    assert_not_nil assigns(:user).errors.on :name
+  end
 
   test "should show user" do
     get :show, :id => users(:one).id
     assert_response :success
   end
+  
+  test "should not show invalid user" do
+    get :show, :id => User.maximum(:id) + 1
+
+    assert_response :redirect
+    assert flash[:notice]
+  end
 
   test "should get edit" do
     get :edit, :id => users(:one).id
     assert_response :success
+  end
+  
+  test "should not edit invalid user" do
+    get :edit, :id => User.maximum(:id) + 1
+
+    assert_response :redirect
+    assert flash[:notice]
   end
 
   test "should update user" do
@@ -44,12 +74,37 @@ class UsersControllerTest < ActionController::TestCase
     }
     assert_redirected_to :action => 'index'
   end
+  
+  test "should not update invalid user" do
+    get :update, :id => User.maximum(:id) + 1
 
+    assert_response :redirect
+    assert flash[:notice]
+  end
+  
   test "should destroy user" do
     assert_difference('User.count', -1) do
       delete :destroy, :id => users(:one).id
     end
 
     assert_redirected_to users_path
+  end
+  
+  test "should not destroy invalid user" do
+    delete :destroy, :id => User.maximum(:id) + 1
+
+    assert_response :redirect
+    assert flash[:notice]
+  end
+
+  test "should not delete last user" do
+    assert_raise RuntimeError do
+      @users = User.find(:all)
+      for user in @users
+        user.destroy
+      end
+      
+      assert flash[:notice]
+    end
   end
 end

@@ -13,11 +13,16 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @user }
+    begin
+      @user = User.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      logger.error("Attempt to access invalid user #{params[:id]}")
+      redirect_to_index('Invalid user')
+    else
+      respond_to do |format|
+        format.html # show.html.erb
+        format.xml  { render :xml => @user }
+      end
     end
   end
 
@@ -32,6 +37,10 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    
+    rescue ActiveRecord::RecordNotFound
+      logger.error("Attempt to access invalid user #{params[:id]}")
+      redirect_to_index('Invalid user')
   end
 
   def create
@@ -50,31 +59,51 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = User.find(params[:id])
-
-    respond_to do |format|
-      if @user.update_attributes(params[:user])
-        flash[:notice] = "User #{@user.name} was successfully updated."
-        format.html { redirect_to :action => 'index' }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
+    begin
+      @user = User.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      logger.error("Attempt to access invalid user #{params[:id]}")
+      redirect_to_index('Invalid user')
+    else
+      respond_to do |format|
+        if @user.update_attributes(params[:user])
+          flash[:notice] = "User #{@user.name} was successfully updated."
+          format.html { redirect_to :action => 'index' }
+          format.xml  { head :ok }
+        else
+          format.html { render :action => "edit" }
+          format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
+        end
       end
     end
   end
 
   def destroy
-    @user = User.find(params[:id])
-    begin 
-      flash[:notice] = "User #{@user.name} deleted" 
-      @user.destroy 
-    rescue Exception => e 
-      flash[:notice] = e.message 
+    begin
+      @user = User.find(params[:id])
+      begin 
+        flash[:notice] = "User #{@user.name} deleted" 
+        @user.destroy 
+      rescue Exception => e 
+        flash[:notice] = e.message 
+      end
+    rescue ActiveRecord::RecordNotFound
+      logger.error("Attempt to access invalid user #{params[:id]}")
+      redirect_to_index('Invalid user')
+    else
+      respond_to do |format|
+        format.html { redirect_to(users_url) }
+        format.xml  { head :ok }
+      end
     end
-    respond_to do |format|
-      format.html { redirect_to(users_url) }
-      format.xml  { head :ok }
-    end
+  end
+  
+  
+  private
+  
+  
+  def redirect_to_index message = nil
+    flash[:notice] = message if message
+    redirect_to :action => 'index'
   end
 end
