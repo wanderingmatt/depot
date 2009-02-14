@@ -1,6 +1,8 @@
 class OrdersController < ApplicationController
-  # GET /orders
-  # GET /orders.xml
+  def setup
+    @request.session[:user_id] = users(:one).id
+  end
+
   def index
     @orders = Order.find(:all)
 
@@ -10,8 +12,6 @@ class OrdersController < ApplicationController
     end
   end
 
-  # GET /orders/1
-  # GET /orders/1.xml
   def show
     @order = Order.find(params[:id])
 
@@ -21,8 +21,6 @@ class OrdersController < ApplicationController
     end
   end
 
-  # GET /orders/new
-  # GET /orders/new.xml
   def new
     @order = Order.new
 
@@ -32,13 +30,10 @@ class OrdersController < ApplicationController
     end
   end
 
-  # GET /orders/1/edit
   def edit
     @order = Order.find(params[:id])
   end
 
-  # POST /orders
-  # POST /orders.xml
   def create
     @order = Order.new(params[:order])
 
@@ -54,8 +49,6 @@ class OrdersController < ApplicationController
     end
   end
 
-  # PUT /orders/1
-  # PUT /orders/1.xml
   def update
     @order = Order.find(params[:id])
 
@@ -71,8 +64,6 @@ class OrdersController < ApplicationController
     end
   end
 
-  # DELETE /orders/1
-  # DELETE /orders/1.xml
   def destroy
     @order = Order.find(params[:id])
     @order.destroy
