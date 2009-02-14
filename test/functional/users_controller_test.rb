@@ -28,7 +28,7 @@ class UsersControllerTest < ActionController::TestCase
     assert_redirected_to :action => 'index'
   end
   
-  test "should not create invalid user" do
+  test "should not create user with invalid name" do
     assert_difference('User.count', 0) do    
       post :create, :user => { :name => '' }
     end
@@ -42,6 +42,18 @@ class UsersControllerTest < ActionController::TestCase
     end
     
     assert_not_nil assigns(:user).errors.on :name
+  end
+  
+  test "should confirm password on create" do
+    assert_difference('User.count', 0) do    
+      post :create, :user => {
+        :name => "Kurt Wagner",
+        :password => "darkestxman",
+        :password_confirmation => "darkestxmen"
+      }
+    end
+    
+    assert_not_nil assigns(:user).errors.on :password
   end
 
   test "should show user" do

@@ -3,6 +3,7 @@ require 'test_helper'
 class StoreControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
+    
     assert_response :success
     assert_not_nil assigns(:products)
 
@@ -14,11 +15,13 @@ class StoreControllerTest < ActionController::TestCase
   
   test "session contains cart" do
     get :index
+    
     assert session[:cart]
   end
   
   test "add_to_cart adds a product to the cart" do
     post :add_to_cart, :id => products(:one).id
+    
     assert_response :redirect
     assert flash[:notice]
     assert cart = assigns(:cart)
@@ -27,12 +30,14 @@ class StoreControllerTest < ActionController::TestCase
   
   test "cart handles invalid id" do
     post :add_to_cart, :id => Product.maximum(:id) + 1
+    
     assert_response :redirect
     assert flash[:notice]
   end
   
   test "empty_cart empties the cart" do
     post :empty_cart
+    
     assert_nil session[:cart]
     assert_response :redirect
     assert flash[:notice]
@@ -41,11 +46,13 @@ class StoreControllerTest < ActionController::TestCase
   test "checkout should succeed with a full cart" do
     post :add_to_cart, :id => products(:one).id
     post :checkout
+    
     assert_response :success
   end
   
   test "checkout should redirect with an empty cart" do
     post :checkout
+    
     assert_response :redirect
     assert flash[:notice]
   end
