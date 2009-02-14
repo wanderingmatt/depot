@@ -41,7 +41,7 @@ class ProductsControllerTest < ActionController::TestCase
     assert_redirected_to product_path(assigns(:product))
   end
   
-  test "should error on invalid product" do
+  test "should not create invalid product" do
     assert_difference('Product.count', 0) do    
       post :create, :product => {
         :title        => '',
@@ -57,6 +57,13 @@ class ProductsControllerTest < ActionController::TestCase
   test "should show product" do
     get :show, :id => products(:one).id
     assert_response :success
+  end
+  
+  test "should not show invalid product" do
+    get :show, :id => Product.maximum(:id) + 1
+
+    assert_response :redirect
+    assert flash[:notice]
   end
 
   test "should get edit" do
@@ -74,6 +81,13 @@ class ProductsControllerTest < ActionController::TestCase
       :name => 'product[price]'
     }
     assert_response :success
+  end
+  
+  test "should not edit invalid product" do
+    get :edit, :id => Product.maximum(:id) + 1
+
+    assert_response :redirect
+    assert flash[:notice]
   end
 
   test "should update product" do

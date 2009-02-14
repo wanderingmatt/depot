@@ -1,6 +1,4 @@
 class ProductsController < ApplicationController
-  # GET /products
-  # GET /products.xml
   def index    
     @products = Product.find(:all)
 
@@ -10,19 +8,20 @@ class ProductsController < ApplicationController
     end
   end
 
-  # GET /products/1
-  # GET /products/1.xml
   def show
-    @product = Product.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @product }
+    begin
+      @product = Product.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      logger.error("Attempt to access invalid product #{params[:id]}")
+      redirect_to_index('Invalid product')
+    else
+      respond_to do |format|
+        format.html # show.html.erb
+        format.xml  { render :xml => @product }
+      end
     end
   end
 
-  # GET /products/new
-  # GET /products/new.xml
   def new
     @product = Product.new
 
@@ -32,13 +31,15 @@ class ProductsController < ApplicationController
     end
   end
 
-  # GET /products/1/edit
   def edit
-    @product = Product.find(params[:id])
+    begin
+      @product = Product.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      logger.error("Attempt to access invalid product #{params[:id]}")
+      redirect_to_index('Invalid product')
+    end
   end
 
-  # POST /products
-  # POST /products.xml
   def create
     @product = Product.new(params[:product])
 
@@ -54,8 +55,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  # PUT /products/1
-  # PUT /products/1.xml
   def update
     @product = Product.find(params[:id])
 
@@ -71,8 +70,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  # DELETE /products/1
-  # DELETE /products/1.xml
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
@@ -81,5 +78,14 @@ class ProductsController < ApplicationController
       format.html { redirect_to(products_url) }
       format.xml  { head :ok }
     end
+  end
+  
+  
+  private
+  
+  
+  def redirect_to_index message = nil
+    flash[:notice] = message if message
+    redirect_to :action => 'index'
   end
 end
