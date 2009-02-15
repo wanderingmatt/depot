@@ -4,9 +4,9 @@ class AdminController < ApplicationController
       user = User.authenticate(params[:name], params[:password])
       if user
         session[:user_id] = user.id
-        uri = session[:original_uri] 
+        uri = session[:original_uri] # Remembers the page that the user was on when presented with login
         session[:original_uri] = nil 
-        redirect_to( uri || { :action => "index" } )         
+        redirect_to( uri || { :action => "index" } ) # Redirect the user back to their referring page if available
       else
         flash.now[:notice] = "Invalid user/password combination"
       end
