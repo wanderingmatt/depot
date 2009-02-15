@@ -11,6 +11,7 @@ class Product < ActiveRecord::Base
   validates_numericality_of :price
   validate                  :price_must_be_at_least_a_cent
   
+  has_many :orders, :through => :line_items
   has_many :line_items
   
 

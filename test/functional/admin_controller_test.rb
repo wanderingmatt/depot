@@ -36,22 +36,22 @@ class AdminControllerTest < ActionController::TestCase
     assert_response :redirect
     assert_redirected_to uri
   end
+  
+  test "login handles invalid name" do
+    post :login, :name => '', :password => 'coolestxman'
+  
+    assert_nil @request.session[:user_id]
+    assert_response :success
+    assert flash[:notice]
+  end
 
-  ## Can't figure these out - awaiting feedback from Aaron
-  #
-  # test "login handles invalid user name" do
-  #   post :login, :name => '', :password => 'coolestxman'
-  # 
-  #   assert assigns(:admin).errors.on :name
-  #   assert flash[:notice]
-  # end
-  # 
-  # test "login handles invalid password" do
-  #   post :login, :name => @user.name, :password => 'jank'
-  # 
-  #   assert_not_nil assigns(:admin).errors.on :password
-  #   assert flash[:notice]
-  # end
+  test "login handles invalid password" do
+    post :login, :name => @user.name, :password => 'jank'
+    
+    assert_nil @request.session[:user_id]
+    assert_response :success
+    assert flash[:notice]
+  end
   
   test "logs user out" do
     post :login, :name => @user.name, :password => 'coolestxman'
