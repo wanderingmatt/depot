@@ -108,15 +108,4 @@ class UsersControllerTest < ActionController::TestCase
     assert_response :redirect
     assert flash[:notice]
   end
-
-  test "should not delete last user" do
-    assert_raise RuntimeError do
-      @users = User.find(:all)
-      for user in @users
-        user.destroy
-      end
-      
-      assert flash[:notice]
-    end
-  end
 end
