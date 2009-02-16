@@ -50,11 +50,6 @@ class StoreController < ApplicationController
   
   private
 
-
-  def redirect_to_index message = nil
-    flash[:notice] = message if message
-    redirect_to :action => 'index'
-  end
   
   def find_cart 
     @cart = session[:cart] ||= Cart.new # If there is no cart in the session, create a new one

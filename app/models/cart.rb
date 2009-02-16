@@ -16,6 +16,7 @@ class Cart
     current_item
   end
   
+  # Allows you to call add_product with <<
   alias :<< :add_product
   
   def total_items

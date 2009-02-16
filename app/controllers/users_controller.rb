@@ -97,13 +97,4 @@ class UsersController < ApplicationController
       end
     end
   end
-  
-  
-  private
-  
-  
-  def redirect_to_index message = nil
-    flash[:notice] = message if message
-    redirect_to :action => 'index'
-  end
 end

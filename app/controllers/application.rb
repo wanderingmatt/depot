@@ -17,6 +17,16 @@ class ApplicationController < ActionController::Base
   # filter_parameter_logging :password
 
 
+  private
+  
+  
+  # Redirects the User to index and displays a flash message if one was provided
+  def redirect_to_index message = nil
+    flash[:notice] = message if message
+    redirect_to :action => 'index'
+  end
+
+
   protected
 
 

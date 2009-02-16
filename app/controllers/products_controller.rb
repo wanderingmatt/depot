@@ -79,13 +79,4 @@ class ProductsController < ApplicationController
       format.xml  { head :ok }
     end
   end
-  
-  
-  private
-  
-  
-  def redirect_to_index message = nil
-    flash[:notice] = message if message
-    redirect_to :action => 'index'
-  end
 end
