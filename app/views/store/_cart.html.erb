@@ -1,4 +1,4 @@
-<div class="cart-title">Your Cart</div>
+<div class="cart-title"><%= I18n.t 'layout.cart.title' %></div>
 <table>
   <%= render :partial => "cart_item", :collection => cart.items %> 
   <tr class="total-line">
@@ -6,7 +6,7 @@
     <td class="total-cell"><%= number_to_currency(cart.total_price) %></td>
   </tr>
 </table>
-<%= button_to 'Checkout', :action => 'checkout' %>
+<%= button_to I18n.t('layout.cart.button.checkout'), :action => 'checkout' %> 
 <% form_remote_tag :url => { :action => 'empty_cart' } do %>
-  <%= submit_tag 'Empty Cart' %>
+  <%= submit_tag I18n.t('layout.cart.button.empty') %>
 <% end %>
