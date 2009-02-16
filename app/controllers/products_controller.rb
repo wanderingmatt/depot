@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   def index    
-    @products = Product.find(:all)
+    @products = Product.find(:all, :order => "title", :conditions => { :locale => I18n.locale })
 
     respond_to do |format|
       format.html # index.html.erb

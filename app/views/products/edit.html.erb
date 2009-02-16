@@ -20,6 +20,10 @@
     <%= f.text_field :price %>
   </p>
   <p>
+    <%= f.label :locale %>
+    <%= f.select :locale, LANGUAGES %>
+  </p>
+  <p>
     <%= f.submit "Update" %>
   </p>
 <% end %>

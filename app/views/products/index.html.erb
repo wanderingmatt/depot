@@ -1,5 +1,5 @@
 <div id="product-list" class="grid_12">
-  <h3>Available Books</h3>
+  <h3>Available Books in <%= I18n.locale %></h3>
   <table>
     <% for product in @products %> 
     <tr class="<%= cycle('list-line-odd', 'list-line-even') %>"> 

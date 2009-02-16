@@ -20,6 +20,10 @@
           <%= f.label :price %>
           <%= f.text_field :price %>
         </li>
+        <li>
+          <%= f.label :locale %>
+          <%= f.select :locale, LANGUAGES %>
+        </li>
       </ol>
       <div class="buttons">
         <button type="submit">Create</button>
