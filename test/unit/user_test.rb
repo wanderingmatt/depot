@@ -5,14 +5,15 @@ class UserTest < ActiveSupport::TestCase
     assert User.authenticate('James Howlett', 'coolestxman')
   end
   
-  test "should not delete last user" do
-    assert_raise RuntimeError do
-      @users = User.find(:all)
-      for user in @users
-        user.destroy
+  test "should not delete last user" do  
+    users = User.find(:all)
+    assert_raise(RuntimeError) do
+      loop do
+        users.first.destroy
+        users.shift
       end
-      
-      assert flash[:notice]
     end
+
+    assert_equal 1, users.length
   end
 end
