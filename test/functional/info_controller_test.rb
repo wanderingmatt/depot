@@ -7,7 +7,6 @@ class InfoControllerTest < ActionController::TestCase
     doc = Nokogiri::XML(@response.body)
     
     assert_response :success
-    puts doc
     assert_tag :tag => 'title', :content => products(:one).title
   end
 end

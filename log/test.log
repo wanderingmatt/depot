@@ -56472,3 +56472,11 @@ Processing UsersController#update (for 0.0.0.0 at 2009-02-16 19:29:54) [PUT]
   [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE "users" SET "name" = 'Logan', "updated_at" = '2009-02-17 03:29:54' WHERE "id" = 953125641[0m
 Redirected to actionindex
 Completed in 4ms (DB: 1) | 302 Found [http://test.host/users/953125641?user%5Bname%5D=Logan]
+  [4;36;1mProduct Load (0.4ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+
+
+Processing InfoController#who_bought to xml (for 0.0.0.0 at 2009-02-16 19:31:47) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mProduct Load (0.4ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 953125641) [0m
+  [4;36;1mOrder Load (0.4ms)[0m   [0;1mSELECT "orders".* FROM "orders" INNER JOIN line_items ON orders.id = line_items.order_id WHERE (("line_items".product_id = 953125641)) [0m
+Completed in 23ms (View: 0, DB: 4) | 200 OK [http://test.host/info/who_bought/953125641.xml]
