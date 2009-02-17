@@ -42,6 +42,7 @@ class AdminControllerTest < ActionController::TestCase
   
     assert_nil @request.session[:user_id]
     assert_response :success
+    assert_template 'login'
     assert flash[:notice]
   end
 
@@ -50,6 +51,7 @@ class AdminControllerTest < ActionController::TestCase
     
     assert_nil @request.session[:user_id]
     assert_response :success
+    assert_template 'login'
     assert flash[:notice]
   end
   
