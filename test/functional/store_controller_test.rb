@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'yaml'
 
 class StoreControllerTest < ActionController::TestCase
   test "should get index" do
@@ -55,5 +56,28 @@ class StoreControllerTest < ActionController::TestCase
     
     assert_response :redirect
     assert flash[:notice]
+  end
+  
+  test "locale is en by default" do
+    get :index
+    
+    assert_equal I18n.locale, 'en'
+  end
+  
+  test "changing the locale results in translation" do
+    en = YAML::load(File.open("#{LOCALES_DIRECTORY}en.yml"))    
+    es = YAML::load(File.open("#{LOCALES_DIRECTORY}es.yml"))    
+    
+    @request.session[:locale] = I18n.locale
+    get :index
+    
+    assert_equal @request.session[:locale], 'en'
+    assert_tag :tag => 'h1', :content => en['en']['main']['title']
+    
+    @request.session[:locale] = 'es'
+    get :index
+    
+    assert_equal @request.session[:locale], 'es'
+    assert_tag :tag => 'h1', :content => es['es']['main']['title']
   end
 end
